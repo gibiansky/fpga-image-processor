@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/silver/code/serial/quartus/simulation/modelsim
+vimage_processor
+!i10b 1
+!s100 78L=dmaOAU`BKcU>[VSIz3
+I3Xk9d0TUC[[=7]fb1jU?K2
+VEf]B[bJP<mkC@E_PiK4kP3
+Z1 d/home/silver/code/serial/quartus/simulation/modelsim
+w1382151478
+8image_processor.vo
+Fimage_processor.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1382151484.354583
+!s107 image_processor.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|image_processor.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

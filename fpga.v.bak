@@ -17,8 +17,8 @@ module image_processor(
 		ledg,							//	LED Green[7:0]
 		ledr,							//	LED Red[9:0]
 		////////////////////////	UART	////////////////////////
-		tx,						//	UART Transmitter
-		rx,						//	UART Receiver
+		UART_TXD,						//	UART Transmitter
+		UART_RXD,						//	UART Receiver
 		/////////////////////	SDRAM Interface		////////////////
 		DRAM_DQ,						//	SDRAM Data bus 16 Bits
 		DRAM_ADDR,						//	SDRAM Address bus 12 Bits
@@ -163,10 +163,7 @@ output			AUD_XCK;				//	Audio CODEC Chip Clock
 inout	[35:0]	GPIO_0;					//	GPIO Connection 0
 inout	[35:0]	GPIO_1;					//	GPIO Connection 1
 
-wire ready;
-wire [7:0] serial_out;
-serial_read serial(CLOCK_24, rx, ready, serial_out);
-
-assign ledr[7:0] = serial_out;
+assign ledg[7:0] = sw[7:0];
+assign ledr[9:0] = {3'b0, 3'b111, key[3:0]};
 
 endmodule

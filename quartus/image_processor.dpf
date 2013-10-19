@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="sw[0..9]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="key[0..3]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[0..9]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="ledg[0..7]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="hex0[0..6]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="hex1[0..6]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="hex2[0..6]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="hex3[0..6]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="rgb[0..11]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="sram_addr[0..17]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="sram_dq[0..15]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+		<bus name="sw[0..9]" direction="Unknown Group" >
+			<member name="sw[0]" />
+			<member name="sw[1]" />
+			<member name="sw[2]" />
+			<member name="sw[3]" />
+			<member name="sw[4]" />
+			<member name="sw[5]" />
+			<member name="sw[6]" />
+			<member name="sw[7]" />
+			<member name="sw[8]" />
+			<member name="sw[9]" />
+		</bus>
+		<bus name="key[0..3]" direction="Unknown Group" >
+			<member name="key[0]" />
+			<member name="key[1]" />
+			<member name="key[2]" />
+			<member name="key[3]" />
+		</bus>
+		<bus name="ledr[0..9]" direction="Unknown Group" >
+			<member name="ledr[0]" />
+			<member name="ledr[1]" />
+			<member name="ledr[2]" />
+			<member name="ledr[3]" />
+			<member name="ledr[4]" />
+			<member name="ledr[5]" />
+			<member name="ledr[6]" />
+			<member name="ledr[7]" />
+			<member name="ledr[8]" />
+			<member name="ledr[9]" />
+		</bus>
+		<bus name="ledg[0..7]" direction="Unknown Group" >
+			<member name="ledg[0]" />
+			<member name="ledg[1]" />
+			<member name="ledg[2]" />
+			<member name="ledg[3]" />
+			<member name="ledg[4]" />
+			<member name="ledg[5]" />
+			<member name="ledg[6]" />
+			<member name="ledg[7]" />
+		</bus>
+		<bus name="hex0[0..6]" direction="Unknown Group" >
+			<member name="hex0[0]" />
+			<member name="hex0[1]" />
+			<member name="hex0[2]" />
+			<member name="hex0[3]" />
+			<member name="hex0[4]" />
+			<member name="hex0[5]" />
+			<member name="hex0[6]" />
+		</bus>
+		<bus name="hex1[0..6]" direction="Unknown Group" >
+			<member name="hex1[0]" />
+			<member name="hex1[1]" />
+			<member name="hex1[2]" />
+			<member name="hex1[3]" />
+			<member name="hex1[4]" />
+			<member name="hex1[5]" />
+			<member name="hex1[6]" />
+		</bus>
+		<bus name="hex2[0..6]" direction="Unknown Group" >
+			<member name="hex2[0]" />
+			<member name="hex2[1]" />
+			<member name="hex2[2]" />
+			<member name="hex2[3]" />
+			<member name="hex2[4]" />
+			<member name="hex2[5]" />
+			<member name="hex2[6]" />
+		</bus>
+		<bus name="hex3[0..6]" direction="Unknown Group" >
+			<member name="hex3[0]" />
+			<member name="hex3[1]" />
+			<member name="hex3[2]" />
+			<member name="hex3[3]" />
+			<member name="hex3[4]" />
+			<member name="hex3[5]" />
+			<member name="hex3[6]" />
+		</bus>
+		<bus name="rgb[0..11]" direction="Unknown Group" >
+			<member name="rgb[0]" />
+			<member name="rgb[1]" />
+			<member name="rgb[2]" />
+			<member name="rgb[3]" />
+			<member name="rgb[4]" />
+			<member name="rgb[5]" />
+			<member name="rgb[6]" />
+			<member name="rgb[7]" />
+			<member name="rgb[8]" />
+			<member name="rgb[9]" />
+			<member name="rgb[10]" />
+			<member name="rgb[11]" />
+		</bus>
+		<bus name="sram_addr[0..17]" direction="Unknown Group" >
+			<member name="sram_addr[0]" />
+			<member name="sram_addr[1]" />
+			<member name="sram_addr[2]" />
+			<member name="sram_addr[3]" />
+			<member name="sram_addr[4]" />
+			<member name="sram_addr[5]" />
+			<member name="sram_addr[6]" />
+			<member name="sram_addr[7]" />
+			<member name="sram_addr[8]" />
+			<member name="sram_addr[9]" />
+			<member name="sram_addr[10]" />
+			<member name="sram_addr[11]" />
+			<member name="sram_addr[12]" />
+			<member name="sram_addr[13]" />
+			<member name="sram_addr[14]" />
+			<member name="sram_addr[15]" />
+			<member name="sram_addr[16]" />
+			<member name="sram_addr[17]" />
+		</bus>
+		<bus name="sram_dq[0..15]" direction="Unknown Group" >
+			<member name="sram_dq[0]" />
+			<member name="sram_dq[1]" />
+			<member name="sram_dq[2]" />
+			<member name="sram_dq[3]" />
+			<member name="sram_dq[4]" />
+			<member name="sram_dq[5]" />
+			<member name="sram_dq[6]" />
+			<member name="sram_dq[7]" />
+			<member name="sram_dq[8]" />
+			<member name="sram_dq[9]" />
+			<member name="sram_dq[10]" />
+			<member name="sram_dq[11]" />
+			<member name="sram_dq[12]" />
+			<member name="sram_dq[13]" />
+			<member name="sram_dq[14]" />
+			<member name="sram_dq[15]" />
+		</bus>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

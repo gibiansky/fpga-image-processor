@@ -1,0 +1,8 @@
+module serial_read(
+	input clk,
+	input rx,
+	output ready,
+	output [7:0] out
+	);
+
+endmodule

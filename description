@@ -1,0 +1,15 @@
+Serial Interface:
+    Input rx "receive"; Output tx "transmit";
+
+    Receive:
+        When line is idle, rx = 1.
+        For each byte:
+            Start bit: rx = 0
+            8 bits in the byte. LSB is sent first.
+            End bit: rx = 1
+
+    Oversample rx by 8x.
+    Wait until you see rx != 1 for 2 cycles (maybe 3?).
+    At that point, start generating another clock "baudtick" which ticks every 8 cycles.
+    At each tick of "baudtick":
+        advance state machine
