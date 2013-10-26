@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at serial_read.v(10): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at serial_read.sv(11): always construct contains both blocking and non-blocking assignments

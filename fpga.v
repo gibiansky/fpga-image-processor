@@ -167,6 +167,11 @@ wire ready;
 wire [7:0] serial_out;
 serial_read serial(CLOCK_24, rx, ready, serial_out);
 
-assign ledr[7:0] = serial_out;
+assign ledg[0] = ready;
+reg [7:0] led_reg = 0;
+always @(ready) begin
+	led_reg <= serial_out;
+end
+assign ledr[7:0] = led_reg;
 
 endmodule
