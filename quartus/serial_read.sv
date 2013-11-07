@@ -9,17 +9,15 @@ module serial_read(
 parameter DOWNSAMPLE_24MHZ_CLOCK = 16'd20000;
 reg [15:0] clk_counter = 16'b0;
 always_ff @(posedge clk_24) begin
-	if (clk_counter === DOWNSAMPLE_24MHZ_CLOCK)
-		clk_counter = 0;
+	if (clk_counter == DOWNSAMPLE_24MHZ_CLOCK)
+		clk_counter <= 0;
 	else
 		clk_counter <= clk_counter + 1'b1;
 end
 wire clk = (clk_counter == DOWNSAMPLE_24MHZ_CLOCK);
 
 // Serial port reader states.
-parameter STATE_IDLE0 		= 4'd0;
-parameter STATE_IDLE1 		= 4'd1;
-parameter STATE_IDLE2 		= 4'd2;
+parameter STATE_IDLE 		= 4'd0;
 parameter STATE_START_BIT 	= 4'd3;
 parameter STATE_BIT0 		= 4'd4;
 parameter STATE_BIT1 		= 4'd5;
@@ -32,30 +30,24 @@ parameter STATE_BIT7 		= 4'd11;
 parameter STATE_STOP_BIT	= 4'd12;
 
 // Current state.
-reg [3:0] state = STATE_IDLE0;
+reg [3:0] state = STATE_IDLE;
+reg [1:0] idle_counter = 2'd0;
 
 // Compute the next state.
-reg [3:0] next_state = STATE_IDLE0;
+reg [3:0] next_state = STATE_IDLE;
 always_comb begin
 	case (state)
 		// Count number of times a low bit has been seen. 
 		// Once we've seen it enough, switch to the start bit.
-		STATE_IDLE0:
-			next_state = ~rx ? STATE_IDLE1 : STATE_IDLE0;
-		STATE_IDLE1:
-			next_state = ~rx ? STATE_IDLE2 : STATE_IDLE0;
-		STATE_IDLE2:
-			next_state = ~rx ? STATE_START_BIT : STATE_IDLE0;
+		STATE_IDLE:
+			next_state = (idle_counter == 2'b10) ? STATE_START_BIT : STATE_IDLE;
 			
 		STATE_START_BIT:
 			// In the start bit, if we see a high bit, that means that 
 			// we're not actually on a start bit. That means the channel must be
 			// idle, and transmission is done. Therefore, switch to idle if the received 
 			// value is high (i.e. idle line) instead of expected low (start bit).
-			if (rx)
-				next_state = STATE_IDLE0;
-			else
-				next_state = STATE_BIT0;
+                        next_state = rx ? STATE_IDLE : STATE_BIT0;
 		
 		// Advance through the bits we're reading into.
 		STATE_BIT0: next_state = STATE_BIT1;
@@ -71,7 +63,7 @@ always_comb begin
 		STATE_STOP_BIT: next_state = STATE_START_BIT;
 		
 		// Should never happen.
-		default: next_state = STATE_IDLE0;
+		default: next_state = STATE_IDLE;
 	endcase
 end
 
@@ -85,24 +77,20 @@ wire baud_clk = (baud_count == 3'b0);
 
 // Tick the baud clock if the state isn't idle.
 always @(posedge clk) begin
-	case (state)
+	case (next_state)
 		// When idle, don't increment baud count, because we aren't
 		// synced. Instead, reset to initial value.
-		STATE_IDLE0: begin
+		STATE_IDLE: begin
 			baud_count <= INIT_BAUD_COUNT;
-			state <= next_state;
-		end
-		STATE_IDLE1: begin
-			baud_count <= INIT_BAUD_COUNT;
-			state <= next_state;
-		end
-		STATE_IDLE2: begin
-			baud_count <= INIT_BAUD_COUNT;
-			state <= next_state;
+                        idle_counter <= idle_counter + 2'b1;
 		end
 		
 		// When active, tick the baud clock.
-		default: baud_count <= baud_count + 1'd1;
+                default: begin
+                        baud_count <= baud_count + 1'b1;
+                        idle_counter <= 2'b00;
+                end
+
 	endcase
 end
 
