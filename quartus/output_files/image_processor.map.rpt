@@ -1,5 +1,5 @@
 Analysis & Synthesis report for image_processor
-Fri Oct 18 21:45:40 2013
+Sat Oct 19 22:15:09 2013
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Oct 18 21:45:40 2013               ;
+; Analysis & Synthesis Status        ; Failed - Sat Oct 19 22:15:09 2013               ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; image_processor                                 ;
 ; Top-level Entity Name              ; image_processor                                 ;
@@ -162,19 +162,22 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 18 21:45:39 2013
+    Info: Processing started: Sat Oct 19 22:15:07 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off image_processor -c image_processor
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tester.v
+    Info (12023): Found entity 1: tester
 Info (12021): Found 1 design units, including 1 entities, in source file /home/silver/code/serial/fpga.v
     Info (12023): Found entity 1: image_processor
-Info (12021): Found 1 design units, including 1 entities, in source file serial_read.v
+Info (12021): Found 1 design units, including 1 entities, in source file serial_read.sv
     Info (12023): Found entity 1: serial_read
 Info (12127): Elaborating entity "image_processor" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at fpga.v(173): variable "serial_out" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10034): Output port "HEX0" at fpga.v(95) has no driver
 Warning (10034): Output port "HEX1" at fpga.v(96) has no driver
 Warning (10034): Output port "HEX2" at fpga.v(97) has no driver
 Warning (10034): Output port "HEX3" at fpga.v(98) has no driver
-Warning (10034): Output port "ledg" at fpga.v(100) has no driver
+Warning (10034): Output port "ledg[7..1]" at fpga.v(100) has no driver
 Warning (10034): Output port "ledr[9..8]" at fpga.v(101) has no driver
 Warning (10034): Output port "DRAM_ADDR" at fpga.v(107) has no driver
 Warning (10034): Output port "FL_ADDR" at fpga.v(120) has no driver
@@ -210,43 +213,29 @@ Warning (10034): Output port "VGA_VS" at fpga.v(151) has no driver
 Warning (10034): Output port "AUD_DACDAT" at fpga.v(159) has no driver
 Warning (10034): Output port "AUD_XCK" at fpga.v(161) has no driver
 Info (12128): Elaborating entity "serial_read" for hierarchy "serial_read:serial"
-Warning (10230): Verilog HDL assignment warning at serial_read.v(14): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at serial_read.v(51): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at serial_read.v(59): truncated value with size 32 to match size of target (3)
-Warning (10270): Verilog HDL Case Statement warning at serial_read.v(66): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at serial_read.v(66): all case item expressions in this case statement are onehot
-Warning (10240): Verilog HDL Always Construct warning at serial_read.v(66): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct
-Info (10264): Verilog HDL Case Statement information at serial_read.v(89): all case item expressions in this case statement are onehot
-Info (10041): Inferred latch for "next_state.STATE_STOP_BIT" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT7" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT6" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT5" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT4" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT3" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT2" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT1" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_BIT0" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_START_BIT" at serial_read.v(66)
-Info (10041): Inferred latch for "next_state.STATE_IDLE" at serial_read.v(66)
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_IDLE" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10029): Constant driver at serial_read.v(43) File: /home/silver/code/serial/quartus/serial_read.v Line: 43
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_START_BIT" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT0" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT1" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT2" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT3" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT4" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT5" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT6" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT7" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
-Error (10028): Can't resolve multiple constant drivers for net "state.STATE_STOP_BIT" at serial_read.v(87) File: /home/silver/code/serial/quartus/serial_read.v Line: 87
+Info (10264): Verilog HDL Case Statement information at serial_read.sv(88): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at serial_read.sv(113): all case item expressions in this case statement are onehot
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_IDLE0" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10029): Constant driver at serial_read.sv(87) File: /home/silver/code/serial/quartus/serial_read.sv Line: 87
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_IDLE1" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_IDLE2" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_START_BIT" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT0" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT1" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT2" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT3" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT4" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT5" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT6" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_BIT7" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
+Error (10028): Can't resolve multiple constant drivers for net "state.STATE_STOP_BIT" at serial_read.sv(110) File: /home/silver/code/serial/quartus/serial_read.sv Line: 110
 Error (12152): Can't elaborate user hierarchy "serial_read:serial" File: /home/silver/code/serial/fpga.v Line: 168
 Info (144001): Generated suppressed messages file /home/silver/code/serial/quartus/output_files/image_processor.map.smsg
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 13 errors, 44 warnings
-    Error: Peak virtual memory: 334 megabytes
-    Error: Processing ended: Fri Oct 18 21:45:40 2013
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 15 errors, 40 warnings
+    Error: Peak virtual memory: 343 megabytes
+    Error: Processing ended: Sat Oct 19 22:15:09 2013
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

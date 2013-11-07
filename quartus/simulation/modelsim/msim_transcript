@@ -16,3 +16,3173 @@
 # Top level modules:
 # 	image_processor
 # 
+run -all
+# No Design Loaded!
+vsim -voptargs=+acc testwork.tester
+# vsim -voptargs=+acc testwork.tester 
+# Loading testwork.tester
+# Loading sv_std.std
+# Loading testwork.serial_read
+run -all
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+vlog -work testwork -O0 /home/silver/code/serial/quartus/tester.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tester
+# 
+# Top level modules:
+# 	tester
+vsim -voptargs=+acc testwork.tester
+# vsim -voptargs=+acc testwork.tester 
+# Loading testwork.tester
+# Loading sv_std.std
+# Loading testwork.serial_read
+run -all
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+vlog -work testwork -sv -O0 /home/silver/code/serial/quartus/serial_read.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module serial_read
+# 
+# Top level modules:
+# 	serial_read
+vlog -work testwork -O0 /home/silver/code/serial/quartus/tester.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tester
+# 
+# Top level modules:
+# 	tester
+vsim -voptargs=+acc testwork.tester
+# vsim -voptargs=+acc testwork.tester 
+# Loading testwork.tester
+# Loading sv_std.std
+# Loading testwork.serial_read
+run -all
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+vlog -work testwork -sv -O0 /home/silver/code/serial/quartus/serial_read.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module serial_read
+# 
+# Top level modules:
+# 	serial_read
+vlog -work testwork -O0 /home/silver/code/serial/quartus/tester.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tester
+# 
+# Top level modules:
+# 	tester
+vsim testwork.tester
+# vsim testwork.tester 
+# Loading testwork.tester
+# Loading sv_std.std
+# Loading testwork.serial_read
+run -all
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0001
+# Next State: 0010
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0010
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 1
+# Output: 11110000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 11110000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 01110000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00110000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00010000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 0
+# Ready: 1
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+vlog -work testwork -O0 /home/silver/code/serial/quartus/tester.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tester
+# 
+# Top level modules:
+# 	tester
+vsim -voptargs=+acc testwork.tester
+# vsim -voptargs=+acc testwork.tester 
+# Loading testwork.tester
+# Loading sv_std.std
+# Loading testwork.serial_read
+run -all
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0001
+# Next State: 0010
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0010
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0011
+# Next State: 0100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 0
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 00000000
+# State: 0100
+# Next State: 0101
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 10000000
+# State: 0101
+# Next State: 0110
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11000000
+# State: 0110
+# Next State: 0111
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11100000
+# State: 0111
+# Next State: 1000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11110000
+# State: 1000
+# Next State: 1001
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111000
+# State: 1001
+# Next State: 1010
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111100
+# State: 1010
+# Next State: 1011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111110
+# State: 1011
+# Next State: 1100
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 1100
+# Next State: 0011
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 001
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 010
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 011
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 100
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 101
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 110
+# 
+# RX: 1
+# Ready: 1
+# Output: 11111111
+# State: 0011
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 000
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 
+# RX: 1
+# Ready: 0
+# Output: 11111111
+# State: 0000
+# Next State: 0000
+# Clock Counter:     0
+# Baud Counter: 111
+# 

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 32-bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "10/18/2013 19:57:58"
+// DATE "10/19/2013 21:57:04"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -41,8 +41,8 @@ module image_processor (
 	HEX3,
 	ledg,
 	ledr,
-	UART_TXD,
-	UART_RXD,
+	tx,
+	rx,
 	DRAM_DQ,
 	DRAM_ADDR,
 	DRAM_LDQM,
@@ -105,8 +105,8 @@ output 	[6:0] HEX2;
 output 	[6:0] HEX3;
 output 	[7:0] ledg;
 output 	[9:0] ledr;
-output 	UART_TXD;
-input 	UART_RXD;
+output 	tx;
+input 	rx;
 inout 	[15:0] DRAM_DQ;
 output 	[11:0] DRAM_ADDR;
 output 	DRAM_LDQM;
@@ -183,73 +183,73 @@ inout 	[35:0] GPIO_1;
 // FL_DQ[5]	=>  Location: PIN_AA18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // FL_DQ[6]	=>  Location: PIN_AB19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // FL_DQ[7]	=>  Location: PIN_AA19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[0]	=>  Location: PIN_A19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[1]	=>  Location: PIN_H3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[2]	=>  Location: PIN_Y6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[3]	=>  Location: PIN_E21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[4]	=>  Location: PIN_D1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[5]	=>  Location: PIN_G5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[6]	=>  Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[7]	=>  Location: PIN_E15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[8]	=>  Location: PIN_H2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[9]	=>  Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[10]	=>  Location: PIN_J20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[11]	=>  Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[12]	=>  Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[13]	=>  Location: PIN_E2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[14]	=>  Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_DQ[15]	=>  Location: PIN_H6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SD_DAT	=>  Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SD_DAT3	=>  Location: PIN_H10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SD_CMD	=>  Location: PIN_F21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// I2C_SDAT	=>  Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// AUD_ADCLRCK	=>  Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// AUD_DACLRCK	=>  Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// AUD_BCLK	=>  Location: PIN_K20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[0]	=>  Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[1]	=>  Location: PIN_B8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[2]	=>  Location: PIN_L19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[3]	=>  Location: PIN_J21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[4]	=>  Location: PIN_F22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[5]	=>  Location: PIN_T8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[6]	=>  Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[7]	=>  Location: PIN_M6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[8]	=>  Location: PIN_E3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[9]	=>  Location: PIN_M18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[10]	=>  Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[11]	=>  Location: PIN_H11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[12]	=>  Location: PIN_V9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[13]	=>  Location: PIN_E14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[14]	=>  Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[15]	=>  Location: PIN_F8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[16]	=>  Location: PIN_D9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[17]	=>  Location: PIN_A7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[18]	=>  Location: PIN_J22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[19]	=>  Location: PIN_F3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[20]	=>  Location: PIN_AA10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[21]	=>  Location: PIN_U20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[22]	=>  Location: PIN_AA7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[23]	=>  Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[24]	=>  Location: PIN_B9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[25]	=>  Location: PIN_Y17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[26]	=>  Location: PIN_A4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[27]	=>  Location: PIN_P8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[28]	=>  Location: PIN_AB11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[29]	=>  Location: PIN_C9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[30]	=>  Location: PIN_E7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[31]	=>  Location: PIN_U10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[32]	=>  Location: PIN_W7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[33]	=>  Location: PIN_B6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[34]	=>  Location: PIN_AB9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_0[35]	=>  Location: PIN_L18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[0]	=>  Location: PIN_E4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[1]	=>  Location: PIN_H15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[2]	=>  Location: PIN_Y7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[3]	=>  Location: PIN_P9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[4]	=>  Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[5]	=>  Location: PIN_D5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[6]	=>  Location: PIN_R16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// GPIO_1[7]	=>  Location: PIN_H13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[0]	=>  Location: PIN_H14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[1]	=>  Location: PIN_E14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[2]	=>  Location: PIN_J1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[3]	=>  Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[4]	=>  Location: PIN_AB11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[5]	=>  Location: PIN_V11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[6]	=>  Location: PIN_T7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[7]	=>  Location: PIN_G7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[8]	=>  Location: PIN_Y20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[9]	=>  Location: PIN_T16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[10]	=>  Location: PIN_E7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[11]	=>  Location: PIN_B10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[12]	=>  Location: PIN_A7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[13]	=>  Location: PIN_A11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[14]	=>  Location: PIN_K22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_DQ[15]	=>  Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SD_DAT	=>  Location: PIN_AB6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SD_DAT3	=>  Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SD_CMD	=>  Location: PIN_G5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// I2C_SDAT	=>  Location: PIN_AB10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// AUD_ADCLRCK	=>  Location: PIN_E11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// AUD_DACLRCK	=>  Location: PIN_R10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// AUD_BCLK	=>  Location: PIN_AA6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[0]	=>  Location: PIN_G11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[1]	=>  Location: PIN_G6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[2]	=>  Location: PIN_E22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[3]	=>  Location: PIN_F1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[4]	=>  Location: PIN_W16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[5]	=>  Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[6]	=>  Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[7]	=>  Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[8]	=>  Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[9]	=>  Location: PIN_J20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[10]	=>  Location: PIN_J2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[11]	=>  Location: PIN_B19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[12]	=>  Location: PIN_B15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[13]	=>  Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[14]	=>  Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[15]	=>  Location: PIN_E3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[16]	=>  Location: PIN_H5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[17]	=>  Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[18]	=>  Location: PIN_J17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[19]	=>  Location: PIN_J19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[20]	=>  Location: PIN_H7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[21]	=>  Location: PIN_E21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[22]	=>  Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[23]	=>  Location: PIN_F10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[24]	=>  Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[25]	=>  Location: PIN_L18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[26]	=>  Location: PIN_D1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[27]	=>  Location: PIN_G15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[28]	=>  Location: PIN_P8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[29]	=>  Location: PIN_A4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[30]	=>  Location: PIN_G3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[31]	=>  Location: PIN_AA8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[32]	=>  Location: PIN_AA7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[33]	=>  Location: PIN_F21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[34]	=>  Location: PIN_D21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_0[35]	=>  Location: PIN_T11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[0]	=>  Location: PIN_AA11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[1]	=>  Location: PIN_H9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[2]	=>  Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[3]	=>  Location: PIN_Y10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[4]	=>  Location: PIN_B16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[5]	=>  Location: PIN_Y5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[6]	=>  Location: PIN_F9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// GPIO_1[7]	=>  Location: PIN_B20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // GPIO_1[8]	=>  Location: PIN_F12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // GPIO_1[9]	=>  Location: PIN_F13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // GPIO_1[10]	=>  Location: PIN_C14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
@@ -278,40 +278,51 @@ inout 	[35:0] GPIO_1;
 // GPIO_1[33]	=>  Location: PIN_N15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // GPIO_1[34]	=>  Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // GPIO_1[35]	=>  Location: PIN_P18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// CLOCK_24	=>  Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // CLOCK_27	=>  Location: PIN_D12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// CLOCK_50	=>  Location: PIN_F9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// CLOCK_50	=>  Location: PIN_R16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // EXT_CLOCK	=>  Location: PIN_M21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// key[0]	=>  Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// key[1]	=>  Location: PIN_R21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// key[2]	=>  Location: PIN_T22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// key[3]	=>  Location: PIN_T21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[0]	=>  Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[1]	=>  Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[2]	=>  Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[3]	=>  Location: PIN_V12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[4]	=>  Location: PIN_W12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[5]	=>  Location: PIN_U12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[6]	=>  Location: PIN_U11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// sw[7]	=>  Location: PIN_M2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // sw[8]	=>  Location: PIN_M1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // sw[9]	=>  Location: PIN_L2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// HEX0[0]	=>  Location: PIN_G22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX0[1]	=>  Location: PIN_H1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX0[2]	=>  Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX0[3]	=>  Location: PIN_H9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX0[4]	=>  Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX0[5]	=>  Location: PIN_A14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX0[6]	=>  Location: PIN_D11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[0]	=>  Location: PIN_H4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[1]	=>  Location: PIN_C21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[2]	=>  Location: PIN_R9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[3]	=>  Location: PIN_A8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[4]	=>  Location: PIN_J17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[5]	=>  Location: PIN_G8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX1[6]	=>  Location: PIN_D2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[0]	=>  Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[1]	=>  Location: PIN_H11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[2]	=>  Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[3]	=>  Location: PIN_K21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[4]	=>  Location: PIN_M19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[5]	=>  Location: PIN_Y7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX0[6]	=>  Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[0]	=>  Location: PIN_F8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[1]	=>  Location: PIN_Y6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[2]	=>  Location: PIN_U10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[3]	=>  Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[4]	=>  Location: PIN_AB8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[5]	=>  Location: PIN_C9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX1[6]	=>  Location: PIN_AB15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // HEX2[0]	=>  Location: PIN_V8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX2[1]	=>  Location: PIN_A17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX2[2]	=>  Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX2[3]	=>  Location: PIN_G21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX2[4]	=>  Location: PIN_C2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX2[5]	=>  Location: PIN_A6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX2[6]	=>  Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[0]	=>  Location: PIN_B20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[1]	=>  Location: PIN_C1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[2]	=>  Location: PIN_W16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[3]	=>  Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[4]	=>  Location: PIN_U9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[5]	=>  Location: PIN_F10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// HEX3[6]	=>  Location: PIN_AB10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX2[1]	=>  Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX2[2]	=>  Location: PIN_A8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX2[3]	=>  Location: PIN_F11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX2[4]	=>  Location: PIN_W7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX2[5]	=>  Location: PIN_B8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX2[6]	=>  Location: PIN_D11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[0]	=>  Location: PIN_F3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[1]	=>  Location: PIN_F4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[2]	=>  Location: PIN_D22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[3]	=>  Location: PIN_AB7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[4]	=>  Location: PIN_D9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[5]	=>  Location: PIN_J4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// HEX3[6]	=>  Location: PIN_B9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // ledg[0]	=>  Location: PIN_U22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // ledg[1]	=>  Location: PIN_U21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // ledg[2]	=>  Location: PIN_V22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
@@ -330,8 +341,7 @@ inout 	[35:0] GPIO_1;
 // ledr[7]	=>  Location: PIN_U18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // ledr[8]	=>  Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // ledr[9]	=>  Location: PIN_R17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// UART_TXD	=>  Location: PIN_L8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// UART_RXD	=>  Location: PIN_T16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// tx	=>  Location: PIN_G12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // DRAM_ADDR[0]	=>  Location: PIN_W4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // DRAM_ADDR[1]	=>  Location: PIN_W5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // DRAM_ADDR[2]	=>  Location: PIN_Y3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
@@ -379,67 +389,57 @@ inout 	[35:0] GPIO_1;
 // FL_WE_N	=>  Location: PIN_Y14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // FL_RST_N	=>  Location: PIN_W14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // FL_OE_N	=>  Location: PIN_AA15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// FL_CE_N	=>  Location: PIN_G15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[0]	=>  Location: PIN_B19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[1]	=>  Location: PIN_G12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[2]	=>  Location: PIN_D4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[3]	=>  Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[4]	=>  Location: PIN_F2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[5]	=>  Location: PIN_D6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[6]	=>  Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[7]	=>  Location: PIN_B10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[8]	=>  Location: PIN_E11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[9]	=>  Location: PIN_H14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[10]	=>  Location: PIN_H12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[11]	=>  Location: PIN_W11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[12]	=>  Location: PIN_W8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[13]	=>  Location: PIN_E22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[14]	=>  Location: PIN_F11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[15]	=>  Location: PIN_B7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[16]	=>  Location: PIN_H16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_ADDR[17]	=>  Location: PIN_AA3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_UB_N	=>  Location: PIN_A5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_LB_N	=>  Location: PIN_M19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_WE_N	=>  Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_CE_N	=>  Location: PIN_Y9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SRAM_OE_N	=>  Location: PIN_AA6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// SD_CLK	=>  Location: PIN_G6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// FL_CE_N	=>  Location: PIN_M6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[0]	=>  Location: PIN_H6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[1]	=>  Location: PIN_P9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[2]	=>  Location: PIN_A14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[3]	=>  Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[4]	=>  Location: PIN_B5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[5]	=>  Location: PIN_A20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[6]	=>  Location: PIN_F2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[7]	=>  Location: PIN_H15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[8]	=>  Location: PIN_H10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[9]	=>  Location: PIN_V9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[10]	=>  Location: PIN_A19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[11]	=>  Location: PIN_AA3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[12]	=>  Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[13]	=>  Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[14]	=>  Location: PIN_R11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[15]	=>  Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[16]	=>  Location: PIN_G8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_ADDR[17]	=>  Location: PIN_AA10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_UB_N	=>  Location: PIN_B7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_LB_N	=>  Location: PIN_D2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_WE_N	=>  Location: PIN_W9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_CE_N	=>  Location: PIN_B6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SRAM_OE_N	=>  Location: PIN_H1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SD_CLK	=>  Location: PIN_J21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // TDI	=>  Location: PIN_E8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // TCK	=>  Location: PIN_C7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // TCS	=>  Location: PIN_D8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // TDO	=>  Location: PIN_D7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// I2C_SCLK	=>  Location: PIN_H7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// PS2_DAT	=>  Location: PIN_Y10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// PS2_CLK	=>  Location: PIN_G11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// VGA_HS	=>  Location: PIN_AA5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_VS	=>  Location: PIN_R10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_R[0]	=>  Location: PIN_AB8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_R[1]	=>  Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_R[2]	=>  Location: PIN_D21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_R[3]	=>  Location: PIN_W9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_G[0]	=>  Location: PIN_J19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_G[1]	=>  Location: PIN_J2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_G[2]	=>  Location: PIN_G7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_G[3]	=>  Location: PIN_U8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_B[0]	=>  Location: PIN_AA9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_B[1]	=>  Location: PIN_AB5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_B[2]	=>  Location: PIN_AA8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// VGA_B[3]	=>  Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// AUD_ADCDAT	=>  Location: PIN_J1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// AUD_DACDAT	=>  Location: PIN_A11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// AUD_XCK	=>  Location: PIN_K21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// sw[0]	=>  Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[1]	=>  Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[2]	=>  Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[3]	=>  Location: PIN_V12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[4]	=>  Location: PIN_W12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[5]	=>  Location: PIN_U12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[6]	=>  Location: PIN_U11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// sw[7]	=>  Location: PIN_M2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// key[0]	=>  Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// key[1]	=>  Location: PIN_R21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// key[2]	=>  Location: PIN_T22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-// key[3]	=>  Location: PIN_T21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// I2C_SCLK	=>  Location: PIN_D4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// PS2_DAT	=>  Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// PS2_CLK	=>  Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// VGA_HS	=>  Location: PIN_A16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_VS	=>  Location: PIN_W11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_R[0]	=>  Location: PIN_U8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_R[1]	=>  Location: PIN_E15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_R[2]	=>  Location: PIN_A5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_R[3]	=>  Location: PIN_Y9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_G[0]	=>  Location: PIN_W8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_G[1]	=>  Location: PIN_A15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_G[2]	=>  Location: PIN_AB9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_G[3]	=>  Location: PIN_H12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_B[0]	=>  Location: PIN_V20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_B[1]	=>  Location: PIN_Y17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_B[2]	=>  Location: PIN_L8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// VGA_B[3]	=>  Location: PIN_H16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// AUD_ADCDAT	=>  Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// AUD_DACDAT	=>  Location: PIN_D5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// AUD_XCK	=>  Location: PIN_G22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// rx	=>  Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// CLOCK_24	=>  Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 wire gnd;
@@ -457,12 +457,702 @@ tri1 devoe;
 initial $sdf_annotate("image_processor_v_fast.sdo");
 // synopsys translate_on
 
-wire [3:0] \key~combout ;
-wire [9:0] \sw~combout ;
+wire \serial|clk_counter[0]~16_combout ;
+wire \serial|clk_counter[0]~17 ;
+wire \serial|clk_counter[1]~18_combout ;
+wire \serial|clk_counter[1]~19 ;
+wire \serial|clk_counter[2]~20_combout ;
+wire \serial|clk_counter[2]~21 ;
+wire \serial|clk_counter[3]~22_combout ;
+wire \serial|clk_counter[3]~23 ;
+wire \serial|clk_counter[4]~24_combout ;
+wire \serial|clk_counter[4]~25 ;
+wire \serial|clk_counter[5]~26_combout ;
+wire \serial|clk_counter[5]~27 ;
+wire \serial|clk_counter[6]~28_combout ;
+wire \serial|clk_counter[6]~29 ;
+wire \serial|clk_counter[7]~30_combout ;
+wire \serial|clk_counter[7]~31 ;
+wire \serial|clk_counter[8]~32_combout ;
+wire \serial|clk_counter[8]~33 ;
+wire \serial|clk_counter[9]~34_combout ;
+wire \serial|clk_counter[9]~35 ;
+wire \serial|clk_counter[10]~36_combout ;
+wire \serial|clk_counter[10]~37 ;
+wire \serial|clk_counter[11]~38_combout ;
+wire \serial|clk_counter[11]~39 ;
+wire \serial|clk_counter[12]~40_combout ;
+wire \serial|clk_counter[12]~41 ;
+wire \serial|clk_counter[13]~42_combout ;
+wire \serial|clk_counter[13]~43 ;
+wire \serial|clk_counter[14]~44_combout ;
+wire \serial|clk_counter[14]~45 ;
+wire \serial|clk_counter[15]~46_combout ;
+wire \serial|baud_count~1_combout ;
+wire \serial|Equal0~0_combout ;
+wire \serial|Equal0~1_combout ;
+wire \serial|Equal0~2_combout ;
+wire \serial|Equal0~3_combout ;
+wire \rtl~1_combout ;
+wire \CLOCK_24~combout ;
+wire \rx~combout ;
+wire \serial|next_state.STATE_IDLE2~0_combout ;
+wire \serial|state.STATE_IDLE2~regout ;
+wire \serial|next_state.STATE_BIT0~0_combout ;
+wire \serial|state.STATE_BIT0~regout ;
+wire \serial|state.STATE_BIT1~regout ;
+wire \serial|state.STATE_BIT2~feeder_combout ;
+wire \serial|state.STATE_BIT2~regout ;
+wire \serial|state.STATE_BIT3~feeder_combout ;
+wire \serial|state.STATE_BIT3~regout ;
+wire \serial|state.STATE_BIT4~feeder_combout ;
+wire \serial|state.STATE_BIT4~regout ;
+wire \serial|state.STATE_BIT5~feeder_combout ;
+wire \serial|state.STATE_BIT5~regout ;
+wire \serial|state.STATE_BIT6~feeder_combout ;
+wire \serial|state.STATE_BIT6~regout ;
+wire \serial|state.STATE_BIT7~feeder_combout ;
+wire \serial|state.STATE_BIT7~regout ;
+wire \serial|state.STATE_STOP_BIT~regout ;
+wire \serial|Selector1~0_combout ;
+wire \serial|state.STATE_START_BIT~regout ;
+wire \serial|Selector0~0_combout ;
+wire \serial|Selector0~1_combout ;
+wire \serial|state.STATE_IDLE0~regout ;
+wire \serial|next_state.STATE_IDLE1~0_combout ;
+wire \serial|state.STATE_IDLE1~regout ;
+wire \serial|baud_count~0_combout ;
+wire \serial|baud_count~2_combout ;
+wire \serial|baud_count~3_combout ;
+wire \rtl~0_combout ;
+wire \rtl~0clkctrl_outclk ;
+wire \serial|Selector2~0_combout ;
+wire \serial|ready~regout ;
+wire \serial|out[0]~0_combout ;
+wire \serial|out[1]~1_combout ;
+wire \serial|out[2]~2_combout ;
+wire \serial|out[3]~3_combout ;
+wire \serial|out[4]~4_combout ;
+wire \serial|out[5]~5_combout ;
+wire \serial|out[6]~6_combout ;
+wire \serial|out[7]~7_combout ;
+wire [7:0] \serial|out ;
+wire [15:0] \serial|clk_counter ;
+wire [2:0] \serial|baud_count ;
 
 
-// Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[0]~I (
+// Location: LCFF_X48_Y6_N1
+cycloneii_lcell_ff \serial|clk_counter[0] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[0]~16_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [0]));
+
+// Location: LCFF_X48_Y6_N3
+cycloneii_lcell_ff \serial|clk_counter[1] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[1]~18_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [1]));
+
+// Location: LCFF_X48_Y6_N5
+cycloneii_lcell_ff \serial|clk_counter[2] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[2]~20_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [2]));
+
+// Location: LCFF_X48_Y6_N7
+cycloneii_lcell_ff \serial|clk_counter[3] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[3]~22_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [3]));
+
+// Location: LCFF_X48_Y6_N11
+cycloneii_lcell_ff \serial|clk_counter[5] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[5]~26_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [5]));
+
+// Location: LCFF_X48_Y6_N9
+cycloneii_lcell_ff \serial|clk_counter[4] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[4]~24_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [4]));
+
+// Location: LCFF_X48_Y6_N13
+cycloneii_lcell_ff \serial|clk_counter[6] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[6]~28_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [6]));
+
+// Location: LCFF_X48_Y6_N15
+cycloneii_lcell_ff \serial|clk_counter[7] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[7]~30_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [7]));
+
+// Location: LCFF_X48_Y6_N19
+cycloneii_lcell_ff \serial|clk_counter[9] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[9]~34_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [9]));
+
+// Location: LCFF_X48_Y6_N21
+cycloneii_lcell_ff \serial|clk_counter[10] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[10]~36_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [10]));
+
+// Location: LCFF_X48_Y6_N23
+cycloneii_lcell_ff \serial|clk_counter[11] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[11]~38_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [11]));
+
+// Location: LCFF_X48_Y6_N17
+cycloneii_lcell_ff \serial|clk_counter[8] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[8]~32_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [8]));
+
+// Location: LCFF_X48_Y6_N29
+cycloneii_lcell_ff \serial|clk_counter[14] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[14]~44_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [14]));
+
+// Location: LCFF_X48_Y6_N25
+cycloneii_lcell_ff \serial|clk_counter[12] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[12]~40_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [12]));
+
+// Location: LCFF_X48_Y6_N27
+cycloneii_lcell_ff \serial|clk_counter[13] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[13]~42_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [13]));
+
+// Location: LCFF_X48_Y6_N31
+cycloneii_lcell_ff \serial|clk_counter[15] (
+	.clk(\CLOCK_24~combout ),
+	.datain(\serial|clk_counter[15]~46_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(\rtl~1_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|clk_counter [15]));
+
+// Location: LCCOMB_X48_Y6_N0
+cycloneii_lcell_comb \serial|clk_counter[0]~16 (
+// Equation(s):
+// \serial|clk_counter[0]~16_combout  = \serial|clk_counter [0] $ (VCC)
+// \serial|clk_counter[0]~17  = CARRY(\serial|clk_counter [0])
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [0]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\serial|clk_counter[0]~16_combout ),
+	.cout(\serial|clk_counter[0]~17 ));
+// synopsys translate_off
+defparam \serial|clk_counter[0]~16 .lut_mask = 16'h33CC;
+defparam \serial|clk_counter[0]~16 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N2
+cycloneii_lcell_comb \serial|clk_counter[1]~18 (
+// Equation(s):
+// \serial|clk_counter[1]~18_combout  = (\serial|clk_counter [1] & (!\serial|clk_counter[0]~17 )) # (!\serial|clk_counter [1] & ((\serial|clk_counter[0]~17 ) # (GND)))
+// \serial|clk_counter[1]~19  = CARRY((!\serial|clk_counter[0]~17 ) # (!\serial|clk_counter [1]))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [1]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[0]~17 ),
+	.combout(\serial|clk_counter[1]~18_combout ),
+	.cout(\serial|clk_counter[1]~19 ));
+// synopsys translate_off
+defparam \serial|clk_counter[1]~18 .lut_mask = 16'h3C3F;
+defparam \serial|clk_counter[1]~18 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N4
+cycloneii_lcell_comb \serial|clk_counter[2]~20 (
+// Equation(s):
+// \serial|clk_counter[2]~20_combout  = (\serial|clk_counter [2] & (\serial|clk_counter[1]~19  $ (GND))) # (!\serial|clk_counter [2] & (!\serial|clk_counter[1]~19  & VCC))
+// \serial|clk_counter[2]~21  = CARRY((\serial|clk_counter [2] & !\serial|clk_counter[1]~19 ))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [2]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[1]~19 ),
+	.combout(\serial|clk_counter[2]~20_combout ),
+	.cout(\serial|clk_counter[2]~21 ));
+// synopsys translate_off
+defparam \serial|clk_counter[2]~20 .lut_mask = 16'hC30C;
+defparam \serial|clk_counter[2]~20 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N6
+cycloneii_lcell_comb \serial|clk_counter[3]~22 (
+// Equation(s):
+// \serial|clk_counter[3]~22_combout  = (\serial|clk_counter [3] & (!\serial|clk_counter[2]~21 )) # (!\serial|clk_counter [3] & ((\serial|clk_counter[2]~21 ) # (GND)))
+// \serial|clk_counter[3]~23  = CARRY((!\serial|clk_counter[2]~21 ) # (!\serial|clk_counter [3]))
+
+	.dataa(\serial|clk_counter [3]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[2]~21 ),
+	.combout(\serial|clk_counter[3]~22_combout ),
+	.cout(\serial|clk_counter[3]~23 ));
+// synopsys translate_off
+defparam \serial|clk_counter[3]~22 .lut_mask = 16'h5A5F;
+defparam \serial|clk_counter[3]~22 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N8
+cycloneii_lcell_comb \serial|clk_counter[4]~24 (
+// Equation(s):
+// \serial|clk_counter[4]~24_combout  = (\serial|clk_counter [4] & (\serial|clk_counter[3]~23  $ (GND))) # (!\serial|clk_counter [4] & (!\serial|clk_counter[3]~23  & VCC))
+// \serial|clk_counter[4]~25  = CARRY((\serial|clk_counter [4] & !\serial|clk_counter[3]~23 ))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [4]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[3]~23 ),
+	.combout(\serial|clk_counter[4]~24_combout ),
+	.cout(\serial|clk_counter[4]~25 ));
+// synopsys translate_off
+defparam \serial|clk_counter[4]~24 .lut_mask = 16'hC30C;
+defparam \serial|clk_counter[4]~24 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N10
+cycloneii_lcell_comb \serial|clk_counter[5]~26 (
+// Equation(s):
+// \serial|clk_counter[5]~26_combout  = (\serial|clk_counter [5] & (!\serial|clk_counter[4]~25 )) # (!\serial|clk_counter [5] & ((\serial|clk_counter[4]~25 ) # (GND)))
+// \serial|clk_counter[5]~27  = CARRY((!\serial|clk_counter[4]~25 ) # (!\serial|clk_counter [5]))
+
+	.dataa(\serial|clk_counter [5]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[4]~25 ),
+	.combout(\serial|clk_counter[5]~26_combout ),
+	.cout(\serial|clk_counter[5]~27 ));
+// synopsys translate_off
+defparam \serial|clk_counter[5]~26 .lut_mask = 16'h5A5F;
+defparam \serial|clk_counter[5]~26 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N12
+cycloneii_lcell_comb \serial|clk_counter[6]~28 (
+// Equation(s):
+// \serial|clk_counter[6]~28_combout  = (\serial|clk_counter [6] & (\serial|clk_counter[5]~27  $ (GND))) # (!\serial|clk_counter [6] & (!\serial|clk_counter[5]~27  & VCC))
+// \serial|clk_counter[6]~29  = CARRY((\serial|clk_counter [6] & !\serial|clk_counter[5]~27 ))
+
+	.dataa(\serial|clk_counter [6]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[5]~27 ),
+	.combout(\serial|clk_counter[6]~28_combout ),
+	.cout(\serial|clk_counter[6]~29 ));
+// synopsys translate_off
+defparam \serial|clk_counter[6]~28 .lut_mask = 16'hA50A;
+defparam \serial|clk_counter[6]~28 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N14
+cycloneii_lcell_comb \serial|clk_counter[7]~30 (
+// Equation(s):
+// \serial|clk_counter[7]~30_combout  = (\serial|clk_counter [7] & (!\serial|clk_counter[6]~29 )) # (!\serial|clk_counter [7] & ((\serial|clk_counter[6]~29 ) # (GND)))
+// \serial|clk_counter[7]~31  = CARRY((!\serial|clk_counter[6]~29 ) # (!\serial|clk_counter [7]))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [7]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[6]~29 ),
+	.combout(\serial|clk_counter[7]~30_combout ),
+	.cout(\serial|clk_counter[7]~31 ));
+// synopsys translate_off
+defparam \serial|clk_counter[7]~30 .lut_mask = 16'h3C3F;
+defparam \serial|clk_counter[7]~30 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N16
+cycloneii_lcell_comb \serial|clk_counter[8]~32 (
+// Equation(s):
+// \serial|clk_counter[8]~32_combout  = (\serial|clk_counter [8] & (\serial|clk_counter[7]~31  $ (GND))) # (!\serial|clk_counter [8] & (!\serial|clk_counter[7]~31  & VCC))
+// \serial|clk_counter[8]~33  = CARRY((\serial|clk_counter [8] & !\serial|clk_counter[7]~31 ))
+
+	.dataa(\serial|clk_counter [8]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[7]~31 ),
+	.combout(\serial|clk_counter[8]~32_combout ),
+	.cout(\serial|clk_counter[8]~33 ));
+// synopsys translate_off
+defparam \serial|clk_counter[8]~32 .lut_mask = 16'hA50A;
+defparam \serial|clk_counter[8]~32 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N18
+cycloneii_lcell_comb \serial|clk_counter[9]~34 (
+// Equation(s):
+// \serial|clk_counter[9]~34_combout  = (\serial|clk_counter [9] & (!\serial|clk_counter[8]~33 )) # (!\serial|clk_counter [9] & ((\serial|clk_counter[8]~33 ) # (GND)))
+// \serial|clk_counter[9]~35  = CARRY((!\serial|clk_counter[8]~33 ) # (!\serial|clk_counter [9]))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [9]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[8]~33 ),
+	.combout(\serial|clk_counter[9]~34_combout ),
+	.cout(\serial|clk_counter[9]~35 ));
+// synopsys translate_off
+defparam \serial|clk_counter[9]~34 .lut_mask = 16'h3C3F;
+defparam \serial|clk_counter[9]~34 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N20
+cycloneii_lcell_comb \serial|clk_counter[10]~36 (
+// Equation(s):
+// \serial|clk_counter[10]~36_combout  = (\serial|clk_counter [10] & (\serial|clk_counter[9]~35  $ (GND))) # (!\serial|clk_counter [10] & (!\serial|clk_counter[9]~35  & VCC))
+// \serial|clk_counter[10]~37  = CARRY((\serial|clk_counter [10] & !\serial|clk_counter[9]~35 ))
+
+	.dataa(\serial|clk_counter [10]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[9]~35 ),
+	.combout(\serial|clk_counter[10]~36_combout ),
+	.cout(\serial|clk_counter[10]~37 ));
+// synopsys translate_off
+defparam \serial|clk_counter[10]~36 .lut_mask = 16'hA50A;
+defparam \serial|clk_counter[10]~36 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N22
+cycloneii_lcell_comb \serial|clk_counter[11]~38 (
+// Equation(s):
+// \serial|clk_counter[11]~38_combout  = (\serial|clk_counter [11] & (!\serial|clk_counter[10]~37 )) # (!\serial|clk_counter [11] & ((\serial|clk_counter[10]~37 ) # (GND)))
+// \serial|clk_counter[11]~39  = CARRY((!\serial|clk_counter[10]~37 ) # (!\serial|clk_counter [11]))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [11]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[10]~37 ),
+	.combout(\serial|clk_counter[11]~38_combout ),
+	.cout(\serial|clk_counter[11]~39 ));
+// synopsys translate_off
+defparam \serial|clk_counter[11]~38 .lut_mask = 16'h3C3F;
+defparam \serial|clk_counter[11]~38 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N24
+cycloneii_lcell_comb \serial|clk_counter[12]~40 (
+// Equation(s):
+// \serial|clk_counter[12]~40_combout  = (\serial|clk_counter [12] & (\serial|clk_counter[11]~39  $ (GND))) # (!\serial|clk_counter [12] & (!\serial|clk_counter[11]~39  & VCC))
+// \serial|clk_counter[12]~41  = CARRY((\serial|clk_counter [12] & !\serial|clk_counter[11]~39 ))
+
+	.dataa(\serial|clk_counter [12]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[11]~39 ),
+	.combout(\serial|clk_counter[12]~40_combout ),
+	.cout(\serial|clk_counter[12]~41 ));
+// synopsys translate_off
+defparam \serial|clk_counter[12]~40 .lut_mask = 16'hA50A;
+defparam \serial|clk_counter[12]~40 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N26
+cycloneii_lcell_comb \serial|clk_counter[13]~42 (
+// Equation(s):
+// \serial|clk_counter[13]~42_combout  = (\serial|clk_counter [13] & (!\serial|clk_counter[12]~41 )) # (!\serial|clk_counter [13] & ((\serial|clk_counter[12]~41 ) # (GND)))
+// \serial|clk_counter[13]~43  = CARRY((!\serial|clk_counter[12]~41 ) # (!\serial|clk_counter [13]))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [13]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[12]~41 ),
+	.combout(\serial|clk_counter[13]~42_combout ),
+	.cout(\serial|clk_counter[13]~43 ));
+// synopsys translate_off
+defparam \serial|clk_counter[13]~42 .lut_mask = 16'h3C3F;
+defparam \serial|clk_counter[13]~42 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N28
+cycloneii_lcell_comb \serial|clk_counter[14]~44 (
+// Equation(s):
+// \serial|clk_counter[14]~44_combout  = (\serial|clk_counter [14] & (\serial|clk_counter[13]~43  $ (GND))) # (!\serial|clk_counter [14] & (!\serial|clk_counter[13]~43  & VCC))
+// \serial|clk_counter[14]~45  = CARRY((\serial|clk_counter [14] & !\serial|clk_counter[13]~43 ))
+
+	.dataa(vcc),
+	.datab(\serial|clk_counter [14]),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\serial|clk_counter[13]~43 ),
+	.combout(\serial|clk_counter[14]~44_combout ),
+	.cout(\serial|clk_counter[14]~45 ));
+// synopsys translate_off
+defparam \serial|clk_counter[14]~44 .lut_mask = 16'hC30C;
+defparam \serial|clk_counter[14]~44 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X48_Y6_N30
+cycloneii_lcell_comb \serial|clk_counter[15]~46 (
+// Equation(s):
+// \serial|clk_counter[15]~46_combout  = \serial|clk_counter[14]~45  $ (\serial|clk_counter [15])
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|clk_counter [15]),
+	.cin(\serial|clk_counter[14]~45 ),
+	.combout(\serial|clk_counter[15]~46_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|clk_counter[15]~46 .lut_mask = 16'h0FF0;
+defparam \serial|clk_counter[15]~46 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N21
+cycloneii_lcell_ff \serial|baud_count[0] (
+	.clk(\rtl~1_combout ),
+	.datain(\serial|baud_count~1_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|baud_count [0]));
+
+// Location: LCCOMB_X49_Y7_N20
+cycloneii_lcell_comb \serial|baud_count~1 (
+// Equation(s):
+// \serial|baud_count~1_combout  = (!\serial|state.STATE_IDLE2~regout  & (!\serial|state.STATE_IDLE1~regout  & (!\serial|baud_count [0] & \serial|state.STATE_IDLE0~regout )))
+
+	.dataa(\serial|state.STATE_IDLE2~regout ),
+	.datab(\serial|state.STATE_IDLE1~regout ),
+	.datac(\serial|baud_count [0]),
+	.datad(\serial|state.STATE_IDLE0~regout ),
+	.cin(gnd),
+	.combout(\serial|baud_count~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|baud_count~1 .lut_mask = 16'h0100;
+defparam \serial|baud_count~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y6_N14
+cycloneii_lcell_comb \serial|Equal0~0 (
+// Equation(s):
+// \serial|Equal0~0_combout  = (!\serial|clk_counter [0] & (!\serial|clk_counter [2] & (!\serial|clk_counter [3] & !\serial|clk_counter [1])))
+
+	.dataa(\serial|clk_counter [0]),
+	.datab(\serial|clk_counter [2]),
+	.datac(\serial|clk_counter [3]),
+	.datad(\serial|clk_counter [1]),
+	.cin(gnd),
+	.combout(\serial|Equal0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|Equal0~0 .lut_mask = 16'h0001;
+defparam \serial|Equal0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y6_N8
+cycloneii_lcell_comb \serial|Equal0~1 (
+// Equation(s):
+// \serial|Equal0~1_combout  = (\serial|clk_counter [5] & (!\serial|clk_counter [7] & (!\serial|clk_counter [4] & !\serial|clk_counter [6])))
+
+	.dataa(\serial|clk_counter [5]),
+	.datab(\serial|clk_counter [7]),
+	.datac(\serial|clk_counter [4]),
+	.datad(\serial|clk_counter [6]),
+	.cin(gnd),
+	.combout(\serial|Equal0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|Equal0~1 .lut_mask = 16'h0002;
+defparam \serial|Equal0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y6_N10
+cycloneii_lcell_comb \serial|Equal0~2 (
+// Equation(s):
+// \serial|Equal0~2_combout  = (\serial|clk_counter [10] & (\serial|clk_counter [11] & (!\serial|clk_counter [8] & \serial|clk_counter [9])))
+
+	.dataa(\serial|clk_counter [10]),
+	.datab(\serial|clk_counter [11]),
+	.datac(\serial|clk_counter [8]),
+	.datad(\serial|clk_counter [9]),
+	.cin(gnd),
+	.combout(\serial|Equal0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|Equal0~2 .lut_mask = 16'h0800;
+defparam \serial|Equal0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y6_N28
+cycloneii_lcell_comb \serial|Equal0~3 (
+// Equation(s):
+// \serial|Equal0~3_combout  = (!\serial|clk_counter [13] & (!\serial|clk_counter [12] & (!\serial|clk_counter [15] & \serial|clk_counter [14])))
+
+	.dataa(\serial|clk_counter [13]),
+	.datab(\serial|clk_counter [12]),
+	.datac(\serial|clk_counter [15]),
+	.datad(\serial|clk_counter [14]),
+	.cin(gnd),
+	.combout(\serial|Equal0~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|Equal0~3 .lut_mask = 16'h0100;
+defparam \serial|Equal0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y6_N30
+cycloneii_lcell_comb \rtl~1 (
+// Equation(s):
+// \rtl~1_combout  = LCELL((\serial|Equal0~2_combout  & (\serial|Equal0~1_combout  & (\serial|Equal0~0_combout  & \serial|Equal0~3_combout ))))
+
+	.dataa(\serial|Equal0~2_combout ),
+	.datab(\serial|Equal0~1_combout ),
+	.datac(\serial|Equal0~0_combout ),
+	.datad(\serial|Equal0~3_combout ),
+	.cin(gnd),
+	.combout(\rtl~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \rtl~1 .lut_mask = 16'h8000;
+defparam \rtl~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \CLOCK_24~I (
 	.datain(gnd),
 	.oe(gnd),
 	.outclk(gnd),
@@ -476,29 +1166,29 @@ cycloneii_io \sw[0]~I (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.devoe(devoe),
-	.combout(\sw~combout [0]),
+	.combout(\CLOCK_24~combout ),
 	.regout(),
 	.differentialout(),
 	.linkout(),
-	.padio(sw[0]));
+	.padio(CLOCK_24));
 // synopsys translate_off
-defparam \sw[0]~I .input_async_reset = "none";
-defparam \sw[0]~I .input_power_up = "low";
-defparam \sw[0]~I .input_register_mode = "none";
-defparam \sw[0]~I .input_sync_reset = "none";
-defparam \sw[0]~I .oe_async_reset = "none";
-defparam \sw[0]~I .oe_power_up = "low";
-defparam \sw[0]~I .oe_register_mode = "none";
-defparam \sw[0]~I .oe_sync_reset = "none";
-defparam \sw[0]~I .operation_mode = "input";
-defparam \sw[0]~I .output_async_reset = "none";
-defparam \sw[0]~I .output_power_up = "low";
-defparam \sw[0]~I .output_register_mode = "none";
-defparam \sw[0]~I .output_sync_reset = "none";
+defparam \CLOCK_24~I .input_async_reset = "none";
+defparam \CLOCK_24~I .input_power_up = "low";
+defparam \CLOCK_24~I .input_register_mode = "none";
+defparam \CLOCK_24~I .input_sync_reset = "none";
+defparam \CLOCK_24~I .oe_async_reset = "none";
+defparam \CLOCK_24~I .oe_power_up = "low";
+defparam \CLOCK_24~I .oe_register_mode = "none";
+defparam \CLOCK_24~I .oe_sync_reset = "none";
+defparam \CLOCK_24~I .operation_mode = "input";
+defparam \CLOCK_24~I .output_async_reset = "none";
+defparam \CLOCK_24~I .output_power_up = "low";
+defparam \CLOCK_24~I .output_register_mode = "none";
+defparam \CLOCK_24~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[1]~I (
+// Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \rx~I (
 	.datain(gnd),
 	.oe(gnd),
 	.outclk(gnd),
@@ -512,386 +1202,776 @@ cycloneii_io \sw[1]~I (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.devoe(devoe),
-	.combout(\sw~combout [1]),
+	.combout(\rx~combout ),
 	.regout(),
 	.differentialout(),
 	.linkout(),
-	.padio(sw[1]));
+	.padio(rx));
 // synopsys translate_off
-defparam \sw[1]~I .input_async_reset = "none";
-defparam \sw[1]~I .input_power_up = "low";
-defparam \sw[1]~I .input_register_mode = "none";
-defparam \sw[1]~I .input_sync_reset = "none";
-defparam \sw[1]~I .oe_async_reset = "none";
-defparam \sw[1]~I .oe_power_up = "low";
-defparam \sw[1]~I .oe_register_mode = "none";
-defparam \sw[1]~I .oe_sync_reset = "none";
-defparam \sw[1]~I .operation_mode = "input";
-defparam \sw[1]~I .output_async_reset = "none";
-defparam \sw[1]~I .output_power_up = "low";
-defparam \sw[1]~I .output_register_mode = "none";
-defparam \sw[1]~I .output_sync_reset = "none";
+defparam \rx~I .input_async_reset = "none";
+defparam \rx~I .input_power_up = "low";
+defparam \rx~I .input_register_mode = "none";
+defparam \rx~I .input_sync_reset = "none";
+defparam \rx~I .oe_async_reset = "none";
+defparam \rx~I .oe_power_up = "low";
+defparam \rx~I .oe_register_mode = "none";
+defparam \rx~I .oe_sync_reset = "none";
+defparam \rx~I .operation_mode = "input";
+defparam \rx~I .output_async_reset = "none";
+defparam \rx~I .output_power_up = "low";
+defparam \rx~I .output_register_mode = "none";
+defparam \rx~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[2]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\sw~combout [2]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(sw[2]));
+// Location: LCCOMB_X49_Y7_N6
+cycloneii_lcell_comb \serial|next_state.STATE_IDLE2~0 (
+// Equation(s):
+// \serial|next_state.STATE_IDLE2~0_combout  = (\rx~combout  & \serial|state.STATE_IDLE1~regout )
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|state.STATE_IDLE1~regout ),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\serial|next_state.STATE_IDLE2~0_combout ),
+	.cout());
 // synopsys translate_off
-defparam \sw[2]~I .input_async_reset = "none";
-defparam \sw[2]~I .input_power_up = "low";
-defparam \sw[2]~I .input_register_mode = "none";
-defparam \sw[2]~I .input_sync_reset = "none";
-defparam \sw[2]~I .oe_async_reset = "none";
-defparam \sw[2]~I .oe_power_up = "low";
-defparam \sw[2]~I .oe_register_mode = "none";
-defparam \sw[2]~I .oe_sync_reset = "none";
-defparam \sw[2]~I .operation_mode = "input";
-defparam \sw[2]~I .output_async_reset = "none";
-defparam \sw[2]~I .output_power_up = "low";
-defparam \sw[2]~I .output_register_mode = "none";
-defparam \sw[2]~I .output_sync_reset = "none";
+defparam \serial|next_state.STATE_IDLE2~0 .lut_mask = 16'hC0C0;
+defparam \serial|next_state.STATE_IDLE2~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_V12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[3]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X49_Y7_N7
+cycloneii_lcell_ff \serial|state.STATE_IDLE2 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|next_state.STATE_IDLE2~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\sw~combout [3]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(sw[3]));
+	.regout(\serial|state.STATE_IDLE2~regout ));
+
+// Location: LCCOMB_X49_Y7_N16
+cycloneii_lcell_comb \serial|next_state.STATE_BIT0~0 (
+// Equation(s):
+// \serial|next_state.STATE_BIT0~0_combout  = (!\rx~combout  & \serial|state.STATE_START_BIT~regout )
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\rx~combout ),
+	.datad(\serial|state.STATE_START_BIT~regout ),
+	.cin(gnd),
+	.combout(\serial|next_state.STATE_BIT0~0_combout ),
+	.cout());
 // synopsys translate_off
-defparam \sw[3]~I .input_async_reset = "none";
-defparam \sw[3]~I .input_power_up = "low";
-defparam \sw[3]~I .input_register_mode = "none";
-defparam \sw[3]~I .input_sync_reset = "none";
-defparam \sw[3]~I .oe_async_reset = "none";
-defparam \sw[3]~I .oe_power_up = "low";
-defparam \sw[3]~I .oe_register_mode = "none";
-defparam \sw[3]~I .oe_sync_reset = "none";
-defparam \sw[3]~I .operation_mode = "input";
-defparam \sw[3]~I .output_async_reset = "none";
-defparam \sw[3]~I .output_power_up = "low";
-defparam \sw[3]~I .output_register_mode = "none";
-defparam \sw[3]~I .output_sync_reset = "none";
+defparam \serial|next_state.STATE_BIT0~0 .lut_mask = 16'h0F00;
+defparam \serial|next_state.STATE_BIT0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_W12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[4]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X49_Y7_N17
+cycloneii_lcell_ff \serial|state.STATE_BIT0 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|next_state.STATE_BIT0~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\sw~combout [4]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(sw[4]));
+	.regout(\serial|state.STATE_BIT0~regout ));
+
+// Location: LCFF_X49_Y7_N3
+cycloneii_lcell_ff \serial|state.STATE_BIT1 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(gnd),
+	.sdata(\serial|state.STATE_BIT0~regout ),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|state.STATE_BIT1~regout ));
+
+// Location: LCCOMB_X48_Y7_N24
+cycloneii_lcell_comb \serial|state.STATE_BIT2~feeder (
+// Equation(s):
+// \serial|state.STATE_BIT2~feeder_combout  = \serial|state.STATE_BIT1~regout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|state.STATE_BIT1~regout ),
+	.cin(gnd),
+	.combout(\serial|state.STATE_BIT2~feeder_combout ),
+	.cout());
 // synopsys translate_off
-defparam \sw[4]~I .input_async_reset = "none";
-defparam \sw[4]~I .input_power_up = "low";
-defparam \sw[4]~I .input_register_mode = "none";
-defparam \sw[4]~I .input_sync_reset = "none";
-defparam \sw[4]~I .oe_async_reset = "none";
-defparam \sw[4]~I .oe_power_up = "low";
-defparam \sw[4]~I .oe_register_mode = "none";
-defparam \sw[4]~I .oe_sync_reset = "none";
-defparam \sw[4]~I .operation_mode = "input";
-defparam \sw[4]~I .output_async_reset = "none";
-defparam \sw[4]~I .output_power_up = "low";
-defparam \sw[4]~I .output_register_mode = "none";
-defparam \sw[4]~I .output_sync_reset = "none";
+defparam \serial|state.STATE_BIT2~feeder .lut_mask = 16'hFF00;
+defparam \serial|state.STATE_BIT2~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_U12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[5]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X48_Y7_N25
+cycloneii_lcell_ff \serial|state.STATE_BIT2 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|state.STATE_BIT2~feeder_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\sw~combout [5]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(sw[5]));
+	.regout(\serial|state.STATE_BIT2~regout ));
+
+// Location: LCCOMB_X47_Y7_N28
+cycloneii_lcell_comb \serial|state.STATE_BIT3~feeder (
+// Equation(s):
+// \serial|state.STATE_BIT3~feeder_combout  = \serial|state.STATE_BIT2~regout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|state.STATE_BIT2~regout ),
+	.cin(gnd),
+	.combout(\serial|state.STATE_BIT3~feeder_combout ),
+	.cout());
 // synopsys translate_off
-defparam \sw[5]~I .input_async_reset = "none";
-defparam \sw[5]~I .input_power_up = "low";
-defparam \sw[5]~I .input_register_mode = "none";
-defparam \sw[5]~I .input_sync_reset = "none";
-defparam \sw[5]~I .oe_async_reset = "none";
-defparam \sw[5]~I .oe_power_up = "low";
-defparam \sw[5]~I .oe_register_mode = "none";
-defparam \sw[5]~I .oe_sync_reset = "none";
-defparam \sw[5]~I .operation_mode = "input";
-defparam \sw[5]~I .output_async_reset = "none";
-defparam \sw[5]~I .output_power_up = "low";
-defparam \sw[5]~I .output_register_mode = "none";
-defparam \sw[5]~I .output_sync_reset = "none";
+defparam \serial|state.STATE_BIT3~feeder .lut_mask = 16'hFF00;
+defparam \serial|state.STATE_BIT3~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_U11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[6]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X47_Y7_N29
+cycloneii_lcell_ff \serial|state.STATE_BIT3 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|state.STATE_BIT3~feeder_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\sw~combout [6]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(sw[6]));
+	.regout(\serial|state.STATE_BIT3~regout ));
+
+// Location: LCCOMB_X47_Y7_N10
+cycloneii_lcell_comb \serial|state.STATE_BIT4~feeder (
+// Equation(s):
+// \serial|state.STATE_BIT4~feeder_combout  = \serial|state.STATE_BIT3~regout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|state.STATE_BIT3~regout ),
+	.cin(gnd),
+	.combout(\serial|state.STATE_BIT4~feeder_combout ),
+	.cout());
 // synopsys translate_off
-defparam \sw[6]~I .input_async_reset = "none";
-defparam \sw[6]~I .input_power_up = "low";
-defparam \sw[6]~I .input_register_mode = "none";
-defparam \sw[6]~I .input_sync_reset = "none";
-defparam \sw[6]~I .oe_async_reset = "none";
-defparam \sw[6]~I .oe_power_up = "low";
-defparam \sw[6]~I .oe_register_mode = "none";
-defparam \sw[6]~I .oe_sync_reset = "none";
-defparam \sw[6]~I .operation_mode = "input";
-defparam \sw[6]~I .output_async_reset = "none";
-defparam \sw[6]~I .output_power_up = "low";
-defparam \sw[6]~I .output_register_mode = "none";
-defparam \sw[6]~I .output_sync_reset = "none";
+defparam \serial|state.STATE_BIT4~feeder .lut_mask = 16'hFF00;
+defparam \serial|state.STATE_BIT4~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_M2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \sw[7]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X47_Y7_N11
+cycloneii_lcell_ff \serial|state.STATE_BIT4 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|state.STATE_BIT4~feeder_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\sw~combout [7]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(sw[7]));
+	.regout(\serial|state.STATE_BIT4~regout ));
+
+// Location: LCCOMB_X47_Y7_N12
+cycloneii_lcell_comb \serial|state.STATE_BIT5~feeder (
+// Equation(s):
+// \serial|state.STATE_BIT5~feeder_combout  = \serial|state.STATE_BIT4~regout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|state.STATE_BIT4~regout ),
+	.cin(gnd),
+	.combout(\serial|state.STATE_BIT5~feeder_combout ),
+	.cout());
 // synopsys translate_off
-defparam \sw[7]~I .input_async_reset = "none";
-defparam \sw[7]~I .input_power_up = "low";
-defparam \sw[7]~I .input_register_mode = "none";
-defparam \sw[7]~I .input_sync_reset = "none";
-defparam \sw[7]~I .oe_async_reset = "none";
-defparam \sw[7]~I .oe_power_up = "low";
-defparam \sw[7]~I .oe_register_mode = "none";
-defparam \sw[7]~I .oe_sync_reset = "none";
-defparam \sw[7]~I .operation_mode = "input";
-defparam \sw[7]~I .output_async_reset = "none";
-defparam \sw[7]~I .output_power_up = "low";
-defparam \sw[7]~I .output_register_mode = "none";
-defparam \sw[7]~I .output_sync_reset = "none";
+defparam \serial|state.STATE_BIT5~feeder .lut_mask = 16'hFF00;
+defparam \serial|state.STATE_BIT5~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \key[0]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X47_Y7_N13
+cycloneii_lcell_ff \serial|state.STATE_BIT5 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|state.STATE_BIT5~feeder_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\key~combout [0]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(key[0]));
+	.regout(\serial|state.STATE_BIT5~regout ));
+
+// Location: LCCOMB_X48_Y7_N18
+cycloneii_lcell_comb \serial|state.STATE_BIT6~feeder (
+// Equation(s):
+// \serial|state.STATE_BIT6~feeder_combout  = \serial|state.STATE_BIT5~regout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|state.STATE_BIT5~regout ),
+	.cin(gnd),
+	.combout(\serial|state.STATE_BIT6~feeder_combout ),
+	.cout());
 // synopsys translate_off
-defparam \key[0]~I .input_async_reset = "none";
-defparam \key[0]~I .input_power_up = "low";
-defparam \key[0]~I .input_register_mode = "none";
-defparam \key[0]~I .input_sync_reset = "none";
-defparam \key[0]~I .oe_async_reset = "none";
-defparam \key[0]~I .oe_power_up = "low";
-defparam \key[0]~I .oe_register_mode = "none";
-defparam \key[0]~I .oe_sync_reset = "none";
-defparam \key[0]~I .operation_mode = "input";
-defparam \key[0]~I .output_async_reset = "none";
-defparam \key[0]~I .output_power_up = "low";
-defparam \key[0]~I .output_register_mode = "none";
-defparam \key[0]~I .output_sync_reset = "none";
+defparam \serial|state.STATE_BIT6~feeder .lut_mask = 16'hFF00;
+defparam \serial|state.STATE_BIT6~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_R21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \key[1]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X48_Y7_N19
+cycloneii_lcell_ff \serial|state.STATE_BIT6 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|state.STATE_BIT6~feeder_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\key~combout [1]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(key[1]));
+	.regout(\serial|state.STATE_BIT6~regout ));
+
+// Location: LCCOMB_X48_Y7_N20
+cycloneii_lcell_comb \serial|state.STATE_BIT7~feeder (
+// Equation(s):
+// \serial|state.STATE_BIT7~feeder_combout  = \serial|state.STATE_BIT6~regout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\serial|state.STATE_BIT6~regout ),
+	.cin(gnd),
+	.combout(\serial|state.STATE_BIT7~feeder_combout ),
+	.cout());
 // synopsys translate_off
-defparam \key[1]~I .input_async_reset = "none";
-defparam \key[1]~I .input_power_up = "low";
-defparam \key[1]~I .input_register_mode = "none";
-defparam \key[1]~I .input_sync_reset = "none";
-defparam \key[1]~I .oe_async_reset = "none";
-defparam \key[1]~I .oe_power_up = "low";
-defparam \key[1]~I .oe_register_mode = "none";
-defparam \key[1]~I .oe_sync_reset = "none";
-defparam \key[1]~I .operation_mode = "input";
-defparam \key[1]~I .output_async_reset = "none";
-defparam \key[1]~I .output_power_up = "low";
-defparam \key[1]~I .output_register_mode = "none";
-defparam \key[1]~I .output_sync_reset = "none";
+defparam \serial|state.STATE_BIT7~feeder .lut_mask = 16'hFF00;
+defparam \serial|state.STATE_BIT7~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_T22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \key[2]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X48_Y7_N21
+cycloneii_lcell_ff \serial|state.STATE_BIT7 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|state.STATE_BIT7~feeder_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\key~combout [2]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(key[2]));
+	.regout(\serial|state.STATE_BIT7~regout ));
+
+// Location: LCFF_X49_Y7_N1
+cycloneii_lcell_ff \serial|state.STATE_STOP_BIT (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(gnd),
+	.sdata(\serial|state.STATE_BIT7~regout ),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|state.STATE_STOP_BIT~regout ));
+
+// Location: LCCOMB_X49_Y7_N8
+cycloneii_lcell_comb \serial|Selector1~0 (
+// Equation(s):
+// \serial|Selector1~0_combout  = (\serial|state.STATE_STOP_BIT~regout ) # ((\rx~combout  & \serial|state.STATE_IDLE2~regout ))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|state.STATE_IDLE2~regout ),
+	.datad(\serial|state.STATE_STOP_BIT~regout ),
+	.cin(gnd),
+	.combout(\serial|Selector1~0_combout ),
+	.cout());
 // synopsys translate_off
-defparam \key[2]~I .input_async_reset = "none";
-defparam \key[2]~I .input_power_up = "low";
-defparam \key[2]~I .input_register_mode = "none";
-defparam \key[2]~I .input_sync_reset = "none";
-defparam \key[2]~I .oe_async_reset = "none";
-defparam \key[2]~I .oe_power_up = "low";
-defparam \key[2]~I .oe_register_mode = "none";
-defparam \key[2]~I .oe_sync_reset = "none";
-defparam \key[2]~I .operation_mode = "input";
-defparam \key[2]~I .output_async_reset = "none";
-defparam \key[2]~I .output_power_up = "low";
-defparam \key[2]~I .output_register_mode = "none";
-defparam \key[2]~I .output_sync_reset = "none";
+defparam \serial|Selector1~0 .lut_mask = 16'hFFC0;
+defparam \serial|Selector1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: PIN_T21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \key[3]~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
+// Location: LCFF_X49_Y7_N9
+cycloneii_lcell_ff \serial|state.STATE_START_BIT (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|Selector1~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.devoe(devoe),
-	.combout(\key~combout [3]),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(key[3]));
+	.regout(\serial|state.STATE_START_BIT~regout ));
+
+// Location: LCCOMB_X49_Y7_N30
+cycloneii_lcell_comb \serial|Selector0~0 (
+// Equation(s):
+// \serial|Selector0~0_combout  = (\rx~combout  & (\serial|state.STATE_START_BIT~regout )) # (!\rx~combout  & (((\serial|state.STATE_IDLE1~regout ) # (\serial|state.STATE_IDLE2~regout ))))
+
+	.dataa(\rx~combout ),
+	.datab(\serial|state.STATE_START_BIT~regout ),
+	.datac(\serial|state.STATE_IDLE1~regout ),
+	.datad(\serial|state.STATE_IDLE2~regout ),
+	.cin(gnd),
+	.combout(\serial|Selector0~0_combout ),
+	.cout());
 // synopsys translate_off
-defparam \key[3]~I .input_async_reset = "none";
-defparam \key[3]~I .input_power_up = "low";
-defparam \key[3]~I .input_register_mode = "none";
-defparam \key[3]~I .input_sync_reset = "none";
-defparam \key[3]~I .oe_async_reset = "none";
-defparam \key[3]~I .oe_power_up = "low";
-defparam \key[3]~I .oe_register_mode = "none";
-defparam \key[3]~I .oe_sync_reset = "none";
-defparam \key[3]~I .operation_mode = "input";
-defparam \key[3]~I .output_async_reset = "none";
-defparam \key[3]~I .output_power_up = "low";
-defparam \key[3]~I .output_register_mode = "none";
-defparam \key[3]~I .output_sync_reset = "none";
+defparam \serial|Selector0~0 .lut_mask = 16'hDDD8;
+defparam \serial|Selector0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
+
+// Location: LCCOMB_X49_Y7_N28
+cycloneii_lcell_comb \serial|Selector0~1 (
+// Equation(s):
+// \serial|Selector0~1_combout  = (!\serial|Selector0~0_combout  & ((\rx~combout ) # (\serial|state.STATE_IDLE0~regout )))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|state.STATE_IDLE0~regout ),
+	.datad(\serial|Selector0~0_combout ),
+	.cin(gnd),
+	.combout(\serial|Selector0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|Selector0~1 .lut_mask = 16'h00FC;
+defparam \serial|Selector0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N29
+cycloneii_lcell_ff \serial|state.STATE_IDLE0 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|Selector0~1_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|state.STATE_IDLE0~regout ));
+
+// Location: LCCOMB_X49_Y7_N4
+cycloneii_lcell_comb \serial|next_state.STATE_IDLE1~0 (
+// Equation(s):
+// \serial|next_state.STATE_IDLE1~0_combout  = (\rx~combout  & !\serial|state.STATE_IDLE0~regout )
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\rx~combout ),
+	.datad(\serial|state.STATE_IDLE0~regout ),
+	.cin(gnd),
+	.combout(\serial|next_state.STATE_IDLE1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|next_state.STATE_IDLE1~0 .lut_mask = 16'h00F0;
+defparam \serial|next_state.STATE_IDLE1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N5
+cycloneii_lcell_ff \serial|state.STATE_IDLE1 (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|next_state.STATE_IDLE1~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|state.STATE_IDLE1~regout ));
+
+// Location: LCCOMB_X49_Y7_N2
+cycloneii_lcell_comb \serial|baud_count~0 (
+// Equation(s):
+// \serial|baud_count~0_combout  = (!\serial|state.STATE_IDLE2~regout  & (!\serial|state.STATE_IDLE1~regout  & \serial|state.STATE_IDLE0~regout ))
+
+	.dataa(\serial|state.STATE_IDLE2~regout ),
+	.datab(\serial|state.STATE_IDLE1~regout ),
+	.datac(vcc),
+	.datad(\serial|state.STATE_IDLE0~regout ),
+	.cin(gnd),
+	.combout(\serial|baud_count~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|baud_count~0 .lut_mask = 16'h1100;
+defparam \serial|baud_count~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y7_N22
+cycloneii_lcell_comb \serial|baud_count~2 (
+// Equation(s):
+// \serial|baud_count~2_combout  = (\serial|baud_count~0_combout  & (\serial|baud_count [0] $ (!\serial|baud_count [1])))
+
+	.dataa(\serial|baud_count [0]),
+	.datab(vcc),
+	.datac(\serial|baud_count [1]),
+	.datad(\serial|baud_count~0_combout ),
+	.cin(gnd),
+	.combout(\serial|baud_count~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|baud_count~2 .lut_mask = 16'hA500;
+defparam \serial|baud_count~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N23
+cycloneii_lcell_ff \serial|baud_count[1] (
+	.clk(\rtl~1_combout ),
+	.datain(\serial|baud_count~2_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|baud_count [1]));
+
+// Location: LCCOMB_X49_Y7_N18
+cycloneii_lcell_comb \serial|baud_count~3 (
+// Equation(s):
+// \serial|baud_count~3_combout  = (\serial|baud_count~0_combout  & (\serial|baud_count [2] $ (((!\serial|baud_count [0] & !\serial|baud_count [1])))))
+
+	.dataa(\serial|baud_count [0]),
+	.datab(\serial|baud_count [1]),
+	.datac(\serial|baud_count [2]),
+	.datad(\serial|baud_count~0_combout ),
+	.cin(gnd),
+	.combout(\serial|baud_count~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|baud_count~3 .lut_mask = 16'hE100;
+defparam \serial|baud_count~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N19
+cycloneii_lcell_ff \serial|baud_count[2] (
+	.clk(\rtl~1_combout ),
+	.datain(\serial|baud_count~3_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|baud_count [2]));
+
+// Location: LCCOMB_X49_Y7_N0
+cycloneii_lcell_comb \rtl~0 (
+// Equation(s):
+// \rtl~0_combout  = LCELL((\serial|baud_count [0] & (\serial|baud_count [2] & \serial|baud_count [1])))
+
+	.dataa(\serial|baud_count [0]),
+	.datab(\serial|baud_count [2]),
+	.datac(vcc),
+	.datad(\serial|baud_count [1]),
+	.cin(gnd),
+	.combout(\rtl~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \rtl~0 .lut_mask = 16'h8800;
+defparam \rtl~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: CLKCTRL_G4
+cycloneii_clkctrl \rtl~0clkctrl (
+	.ena(vcc),
+	.inclk({gnd,gnd,gnd,\rtl~0_combout }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\rtl~0clkctrl_outclk ));
+// synopsys translate_off
+defparam \rtl~0clkctrl .clock_type = "global clock";
+defparam \rtl~0clkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y7_N14
+cycloneii_lcell_comb \serial|Selector2~0 (
+// Equation(s):
+// \serial|Selector2~0_combout  = (\serial|state.STATE_STOP_BIT~regout ) # ((\serial|ready~regout  & ((!\serial|baud_count~0_combout ) # (!\serial|state.STATE_START_BIT~regout ))))
+
+	.dataa(\serial|state.STATE_START_BIT~regout ),
+	.datab(\serial|state.STATE_STOP_BIT~regout ),
+	.datac(\serial|ready~regout ),
+	.datad(\serial|baud_count~0_combout ),
+	.cin(gnd),
+	.combout(\serial|Selector2~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|Selector2~0 .lut_mask = 16'hDCFC;
+defparam \serial|Selector2~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N15
+cycloneii_lcell_ff \serial|ready (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|Selector2~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|ready~regout ));
+
+// Location: LCCOMB_X49_Y7_N10
+cycloneii_lcell_comb \serial|out[0]~0 (
+// Equation(s):
+// \serial|out[0]~0_combout  = (\serial|state.STATE_BIT7~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT7~regout  & ((\serial|out [0])))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|out [0]),
+	.datad(\serial|state.STATE_BIT7~regout ),
+	.cin(gnd),
+	.combout(\serial|out[0]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[0]~0 .lut_mask = 16'hCCF0;
+defparam \serial|out[0]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N11
+cycloneii_lcell_ff \serial|out[0] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[0]~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [0]));
+
+// Location: LCCOMB_X49_Y7_N26
+cycloneii_lcell_comb \serial|out[1]~1 (
+// Equation(s):
+// \serial|out[1]~1_combout  = (\serial|state.STATE_BIT6~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT6~regout  & ((\serial|out [1])))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|out [1]),
+	.datad(\serial|state.STATE_BIT6~regout ),
+	.cin(gnd),
+	.combout(\serial|out[1]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[1]~1 .lut_mask = 16'hCCF0;
+defparam \serial|out[1]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N27
+cycloneii_lcell_ff \serial|out[1] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[1]~1_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [1]));
+
+// Location: LCCOMB_X47_Y7_N16
+cycloneii_lcell_comb \serial|out[2]~2 (
+// Equation(s):
+// \serial|out[2]~2_combout  = (\serial|state.STATE_BIT5~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT5~regout  & ((\serial|out [2])))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|out [2]),
+	.datad(\serial|state.STATE_BIT5~regout ),
+	.cin(gnd),
+	.combout(\serial|out[2]~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[2]~2 .lut_mask = 16'hCCF0;
+defparam \serial|out[2]~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X47_Y7_N17
+cycloneii_lcell_ff \serial|out[2] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[2]~2_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [2]));
+
+// Location: LCCOMB_X47_Y7_N2
+cycloneii_lcell_comb \serial|out[3]~3 (
+// Equation(s):
+// \serial|out[3]~3_combout  = (\serial|state.STATE_BIT4~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT4~regout  & ((\serial|out [3])))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|out [3]),
+	.datad(\serial|state.STATE_BIT4~regout ),
+	.cin(gnd),
+	.combout(\serial|out[3]~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[3]~3 .lut_mask = 16'hCCF0;
+defparam \serial|out[3]~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X47_Y7_N3
+cycloneii_lcell_ff \serial|out[3] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[3]~3_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [3]));
+
+// Location: LCCOMB_X47_Y7_N0
+cycloneii_lcell_comb \serial|out[4]~4 (
+// Equation(s):
+// \serial|out[4]~4_combout  = (\serial|state.STATE_BIT3~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT3~regout  & ((\serial|out [4])))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|out [4]),
+	.datad(\serial|state.STATE_BIT3~regout ),
+	.cin(gnd),
+	.combout(\serial|out[4]~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[4]~4 .lut_mask = 16'hCCF0;
+defparam \serial|out[4]~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X47_Y7_N1
+cycloneii_lcell_ff \serial|out[4] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[4]~4_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [4]));
+
+// Location: LCCOMB_X47_Y7_N22
+cycloneii_lcell_comb \serial|out[5]~5 (
+// Equation(s):
+// \serial|out[5]~5_combout  = (\serial|state.STATE_BIT2~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT2~regout  & ((\serial|out [5])))
+
+	.dataa(vcc),
+	.datab(\rx~combout ),
+	.datac(\serial|out [5]),
+	.datad(\serial|state.STATE_BIT2~regout ),
+	.cin(gnd),
+	.combout(\serial|out[5]~5_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[5]~5 .lut_mask = 16'hCCF0;
+defparam \serial|out[5]~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X47_Y7_N23
+cycloneii_lcell_ff \serial|out[5] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[5]~5_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [5]));
+
+// Location: LCCOMB_X49_Y7_N12
+cycloneii_lcell_comb \serial|out[6]~6 (
+// Equation(s):
+// \serial|out[6]~6_combout  = (\serial|state.STATE_BIT1~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT1~regout  & ((\serial|out [6])))
+
+	.dataa(\serial|state.STATE_BIT1~regout ),
+	.datab(\rx~combout ),
+	.datac(\serial|out [6]),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\serial|out[6]~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[6]~6 .lut_mask = 16'hD8D8;
+defparam \serial|out[6]~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N13
+cycloneii_lcell_ff \serial|out[6] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[6]~6_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [6]));
+
+// Location: LCCOMB_X49_Y7_N24
+cycloneii_lcell_comb \serial|out[7]~7 (
+// Equation(s):
+// \serial|out[7]~7_combout  = (\serial|state.STATE_BIT0~regout  & (\rx~combout )) # (!\serial|state.STATE_BIT0~regout  & ((\serial|out [7])))
+
+	.dataa(\serial|state.STATE_BIT0~regout ),
+	.datab(\rx~combout ),
+	.datac(\serial|out [7]),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\serial|out[7]~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \serial|out[7]~7 .lut_mask = 16'hD8D8;
+defparam \serial|out[7]~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X49_Y7_N25
+cycloneii_lcell_ff \serial|out[7] (
+	.clk(\rtl~0clkctrl_outclk ),
+	.datain(\serial|out[7]~7_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\serial|out [7]));
 
 // Location: PIN_U1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \DRAM_DQ[0]~I (
@@ -1781,7 +2861,7 @@ defparam \FL_DQ[7]~I .output_register_mode = "none";
 defparam \FL_DQ[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[0]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1818,7 +2898,7 @@ defparam \SRAM_DQ[0]~I .output_register_mode = "none";
 defparam \SRAM_DQ[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[1]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1855,7 +2935,7 @@ defparam \SRAM_DQ[1]~I .output_register_mode = "none";
 defparam \SRAM_DQ[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[2]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1892,7 +2972,7 @@ defparam \SRAM_DQ[2]~I .output_register_mode = "none";
 defparam \SRAM_DQ[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[3]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1929,7 +3009,7 @@ defparam \SRAM_DQ[3]~I .output_register_mode = "none";
 defparam \SRAM_DQ[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[4]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1966,7 +3046,7 @@ defparam \SRAM_DQ[4]~I .output_register_mode = "none";
 defparam \SRAM_DQ[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_V11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[5]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2003,7 +3083,7 @@ defparam \SRAM_DQ[5]~I .output_register_mode = "none";
 defparam \SRAM_DQ[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_T7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[6]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2040,7 +3120,7 @@ defparam \SRAM_DQ[6]~I .output_register_mode = "none";
 defparam \SRAM_DQ[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[7]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2077,7 +3157,7 @@ defparam \SRAM_DQ[7]~I .output_register_mode = "none";
 defparam \SRAM_DQ[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[8]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2114,7 +3194,7 @@ defparam \SRAM_DQ[8]~I .output_register_mode = "none";
 defparam \SRAM_DQ[8]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_T16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[9]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2151,7 +3231,7 @@ defparam \SRAM_DQ[9]~I .output_register_mode = "none";
 defparam \SRAM_DQ[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[10]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2188,7 +3268,7 @@ defparam \SRAM_DQ[10]~I .output_register_mode = "none";
 defparam \SRAM_DQ[10]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[11]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2225,7 +3305,7 @@ defparam \SRAM_DQ[11]~I .output_register_mode = "none";
 defparam \SRAM_DQ[11]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[12]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2262,7 +3342,7 @@ defparam \SRAM_DQ[12]~I .output_register_mode = "none";
 defparam \SRAM_DQ[12]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[13]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2299,7 +3379,7 @@ defparam \SRAM_DQ[13]~I .output_register_mode = "none";
 defparam \SRAM_DQ[13]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_K22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[14]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2336,7 +3416,7 @@ defparam \SRAM_DQ[14]~I .output_register_mode = "none";
 defparam \SRAM_DQ[14]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_DQ[15]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2373,7 +3453,7 @@ defparam \SRAM_DQ[15]~I .output_register_mode = "none";
 defparam \SRAM_DQ[15]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SD_DAT~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2410,7 +3490,7 @@ defparam \SD_DAT~I .output_register_mode = "none";
 defparam \SD_DAT~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SD_DAT3~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2447,7 +3527,7 @@ defparam \SD_DAT3~I .output_register_mode = "none";
 defparam \SD_DAT3~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SD_CMD~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2484,7 +3564,7 @@ defparam \SD_CMD~I .output_register_mode = "none";
 defparam \SD_CMD~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \I2C_SDAT~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2521,7 +3601,7 @@ defparam \I2C_SDAT~I .output_register_mode = "none";
 defparam \I2C_SDAT~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \AUD_ADCLRCK~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2558,7 +3638,7 @@ defparam \AUD_ADCLRCK~I .output_register_mode = "none";
 defparam \AUD_ADCLRCK~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_R10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \AUD_DACLRCK~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2595,7 +3675,7 @@ defparam \AUD_DACLRCK~I .output_register_mode = "none";
 defparam \AUD_DACLRCK~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_K20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \AUD_BCLK~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2632,7 +3712,7 @@ defparam \AUD_BCLK~I .output_register_mode = "none";
 defparam \AUD_BCLK~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[0]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2669,7 +3749,7 @@ defparam \GPIO_0[0]~I .output_register_mode = "none";
 defparam \GPIO_0[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[1]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2706,7 +3786,7 @@ defparam \GPIO_0[1]~I .output_register_mode = "none";
 defparam \GPIO_0[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_L19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[2]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2743,7 +3823,7 @@ defparam \GPIO_0[2]~I .output_register_mode = "none";
 defparam \GPIO_0[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[3]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2780,7 +3860,7 @@ defparam \GPIO_0[3]~I .output_register_mode = "none";
 defparam \GPIO_0[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_W16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[4]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2817,7 +3897,7 @@ defparam \GPIO_0[4]~I .output_register_mode = "none";
 defparam \GPIO_0[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_T8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[5]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2854,7 +3934,7 @@ defparam \GPIO_0[5]~I .output_register_mode = "none";
 defparam \GPIO_0[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[6]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2891,7 +3971,7 @@ defparam \GPIO_0[6]~I .output_register_mode = "none";
 defparam \GPIO_0[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_M6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[7]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2928,7 +4008,7 @@ defparam \GPIO_0[7]~I .output_register_mode = "none";
 defparam \GPIO_0[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[8]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -2965,7 +4045,7 @@ defparam \GPIO_0[8]~I .output_register_mode = "none";
 defparam \GPIO_0[8]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_M18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[9]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3002,7 +4082,7 @@ defparam \GPIO_0[9]~I .output_register_mode = "none";
 defparam \GPIO_0[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[10]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3039,7 +4119,7 @@ defparam \GPIO_0[10]~I .output_register_mode = "none";
 defparam \GPIO_0[10]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[11]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3076,7 +4156,7 @@ defparam \GPIO_0[11]~I .output_register_mode = "none";
 defparam \GPIO_0[11]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_V9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[12]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3113,7 +4193,7 @@ defparam \GPIO_0[12]~I .output_register_mode = "none";
 defparam \GPIO_0[12]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[13]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3150,7 +4230,7 @@ defparam \GPIO_0[13]~I .output_register_mode = "none";
 defparam \GPIO_0[13]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[14]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3187,7 +4267,7 @@ defparam \GPIO_0[14]~I .output_register_mode = "none";
 defparam \GPIO_0[14]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[15]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3224,7 +4304,7 @@ defparam \GPIO_0[15]~I .output_register_mode = "none";
 defparam \GPIO_0[15]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[16]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3261,7 +4341,7 @@ defparam \GPIO_0[16]~I .output_register_mode = "none";
 defparam \GPIO_0[16]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[17]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3298,7 +4378,7 @@ defparam \GPIO_0[17]~I .output_register_mode = "none";
 defparam \GPIO_0[17]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[18]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3335,7 +4415,7 @@ defparam \GPIO_0[18]~I .output_register_mode = "none";
 defparam \GPIO_0[18]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[19]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3372,7 +4452,7 @@ defparam \GPIO_0[19]~I .output_register_mode = "none";
 defparam \GPIO_0[19]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[20]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3409,7 +4489,7 @@ defparam \GPIO_0[20]~I .output_register_mode = "none";
 defparam \GPIO_0[20]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[21]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3446,7 +4526,7 @@ defparam \GPIO_0[21]~I .output_register_mode = "none";
 defparam \GPIO_0[21]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[22]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3483,7 +4563,7 @@ defparam \GPIO_0[22]~I .output_register_mode = "none";
 defparam \GPIO_0[22]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[23]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3520,7 +4600,7 @@ defparam \GPIO_0[23]~I .output_register_mode = "none";
 defparam \GPIO_0[23]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[24]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3557,7 +4637,7 @@ defparam \GPIO_0[24]~I .output_register_mode = "none";
 defparam \GPIO_0[24]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_L18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[25]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3594,7 +4674,7 @@ defparam \GPIO_0[25]~I .output_register_mode = "none";
 defparam \GPIO_0[25]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[26]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3631,7 +4711,7 @@ defparam \GPIO_0[26]~I .output_register_mode = "none";
 defparam \GPIO_0[26]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_P8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[27]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3668,7 +4748,7 @@ defparam \GPIO_0[27]~I .output_register_mode = "none";
 defparam \GPIO_0[27]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_P8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[28]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3705,7 +4785,7 @@ defparam \GPIO_0[28]~I .output_register_mode = "none";
 defparam \GPIO_0[28]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[29]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3742,7 +4822,7 @@ defparam \GPIO_0[29]~I .output_register_mode = "none";
 defparam \GPIO_0[29]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[30]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3779,7 +4859,7 @@ defparam \GPIO_0[30]~I .output_register_mode = "none";
 defparam \GPIO_0[30]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[31]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3816,7 +4896,7 @@ defparam \GPIO_0[31]~I .output_register_mode = "none";
 defparam \GPIO_0[31]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_W7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[32]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3853,7 +4933,7 @@ defparam \GPIO_0[32]~I .output_register_mode = "none";
 defparam \GPIO_0[32]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[33]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3890,7 +4970,7 @@ defparam \GPIO_0[33]~I .output_register_mode = "none";
 defparam \GPIO_0[33]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[34]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3927,7 +5007,7 @@ defparam \GPIO_0[34]~I .output_register_mode = "none";
 defparam \GPIO_0[34]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_L18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_T11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_0[35]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -3964,7 +5044,7 @@ defparam \GPIO_0[35]~I .output_register_mode = "none";
 defparam \GPIO_0[35]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[0]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4001,7 +5081,7 @@ defparam \GPIO_1[0]~I .output_register_mode = "none";
 defparam \GPIO_1[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[1]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4038,7 +5118,7 @@ defparam \GPIO_1[1]~I .output_register_mode = "none";
 defparam \GPIO_1[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[2]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4075,7 +5155,7 @@ defparam \GPIO_1[2]~I .output_register_mode = "none";
 defparam \GPIO_1[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_P9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[3]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4112,7 +5192,7 @@ defparam \GPIO_1[3]~I .output_register_mode = "none";
 defparam \GPIO_1[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[4]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4149,7 +5229,7 @@ defparam \GPIO_1[4]~I .output_register_mode = "none";
 defparam \GPIO_1[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[5]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4186,7 +5266,7 @@ defparam \GPIO_1[5]~I .output_register_mode = "none";
 defparam \GPIO_1[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[6]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -4223,7 +5303,7 @@ defparam \GPIO_1[6]~I .output_register_mode = "none";
 defparam \GPIO_1[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \GPIO_1[7]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -5296,42 +6376,6 @@ defparam \GPIO_1[35]~I .output_register_mode = "none";
 defparam \GPIO_1[35]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \CLOCK_24~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.devoe(devoe),
-	.combout(),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(CLOCK_24));
-// synopsys translate_off
-defparam \CLOCK_24~I .input_async_reset = "none";
-defparam \CLOCK_24~I .input_power_up = "low";
-defparam \CLOCK_24~I .input_register_mode = "none";
-defparam \CLOCK_24~I .input_sync_reset = "none";
-defparam \CLOCK_24~I .oe_async_reset = "none";
-defparam \CLOCK_24~I .oe_power_up = "low";
-defparam \CLOCK_24~I .oe_register_mode = "none";
-defparam \CLOCK_24~I .oe_sync_reset = "none";
-defparam \CLOCK_24~I .operation_mode = "input";
-defparam \CLOCK_24~I .output_async_reset = "none";
-defparam \CLOCK_24~I .output_power_up = "low";
-defparam \CLOCK_24~I .output_register_mode = "none";
-defparam \CLOCK_24~I .output_sync_reset = "none";
-// synopsys translate_on
-
 // Location: PIN_D12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \CLOCK_27~I (
 	.datain(gnd),
@@ -5368,7 +6412,7 @@ defparam \CLOCK_27~I .output_register_mode = "none";
 defparam \CLOCK_27~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// Location: PIN_R16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \CLOCK_50~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -5438,6 +6482,438 @@ defparam \EXT_CLOCK~I .output_async_reset = "none";
 defparam \EXT_CLOCK~I .output_power_up = "low";
 defparam \EXT_CLOCK~I .output_register_mode = "none";
 defparam \EXT_CLOCK~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \key[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(key[0]));
+// synopsys translate_off
+defparam \key[0]~I .input_async_reset = "none";
+defparam \key[0]~I .input_power_up = "low";
+defparam \key[0]~I .input_register_mode = "none";
+defparam \key[0]~I .input_sync_reset = "none";
+defparam \key[0]~I .oe_async_reset = "none";
+defparam \key[0]~I .oe_power_up = "low";
+defparam \key[0]~I .oe_register_mode = "none";
+defparam \key[0]~I .oe_sync_reset = "none";
+defparam \key[0]~I .operation_mode = "input";
+defparam \key[0]~I .output_async_reset = "none";
+defparam \key[0]~I .output_power_up = "low";
+defparam \key[0]~I .output_register_mode = "none";
+defparam \key[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_R21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \key[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(key[1]));
+// synopsys translate_off
+defparam \key[1]~I .input_async_reset = "none";
+defparam \key[1]~I .input_power_up = "low";
+defparam \key[1]~I .input_register_mode = "none";
+defparam \key[1]~I .input_sync_reset = "none";
+defparam \key[1]~I .oe_async_reset = "none";
+defparam \key[1]~I .oe_power_up = "low";
+defparam \key[1]~I .oe_register_mode = "none";
+defparam \key[1]~I .oe_sync_reset = "none";
+defparam \key[1]~I .operation_mode = "input";
+defparam \key[1]~I .output_async_reset = "none";
+defparam \key[1]~I .output_power_up = "low";
+defparam \key[1]~I .output_register_mode = "none";
+defparam \key[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_T22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \key[2]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(key[2]));
+// synopsys translate_off
+defparam \key[2]~I .input_async_reset = "none";
+defparam \key[2]~I .input_power_up = "low";
+defparam \key[2]~I .input_register_mode = "none";
+defparam \key[2]~I .input_sync_reset = "none";
+defparam \key[2]~I .oe_async_reset = "none";
+defparam \key[2]~I .oe_power_up = "low";
+defparam \key[2]~I .oe_register_mode = "none";
+defparam \key[2]~I .oe_sync_reset = "none";
+defparam \key[2]~I .operation_mode = "input";
+defparam \key[2]~I .output_async_reset = "none";
+defparam \key[2]~I .output_power_up = "low";
+defparam \key[2]~I .output_register_mode = "none";
+defparam \key[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_T21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \key[3]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(key[3]));
+// synopsys translate_off
+defparam \key[3]~I .input_async_reset = "none";
+defparam \key[3]~I .input_power_up = "low";
+defparam \key[3]~I .input_register_mode = "none";
+defparam \key[3]~I .input_sync_reset = "none";
+defparam \key[3]~I .oe_async_reset = "none";
+defparam \key[3]~I .oe_power_up = "low";
+defparam \key[3]~I .oe_register_mode = "none";
+defparam \key[3]~I .oe_sync_reset = "none";
+defparam \key[3]~I .operation_mode = "input";
+defparam \key[3]~I .output_async_reset = "none";
+defparam \key[3]~I .output_power_up = "low";
+defparam \key[3]~I .output_register_mode = "none";
+defparam \key[3]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[0]));
+// synopsys translate_off
+defparam \sw[0]~I .input_async_reset = "none";
+defparam \sw[0]~I .input_power_up = "low";
+defparam \sw[0]~I .input_register_mode = "none";
+defparam \sw[0]~I .input_sync_reset = "none";
+defparam \sw[0]~I .oe_async_reset = "none";
+defparam \sw[0]~I .oe_power_up = "low";
+defparam \sw[0]~I .oe_register_mode = "none";
+defparam \sw[0]~I .oe_sync_reset = "none";
+defparam \sw[0]~I .operation_mode = "input";
+defparam \sw[0]~I .output_async_reset = "none";
+defparam \sw[0]~I .output_power_up = "low";
+defparam \sw[0]~I .output_register_mode = "none";
+defparam \sw[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[1]));
+// synopsys translate_off
+defparam \sw[1]~I .input_async_reset = "none";
+defparam \sw[1]~I .input_power_up = "low";
+defparam \sw[1]~I .input_register_mode = "none";
+defparam \sw[1]~I .input_sync_reset = "none";
+defparam \sw[1]~I .oe_async_reset = "none";
+defparam \sw[1]~I .oe_power_up = "low";
+defparam \sw[1]~I .oe_register_mode = "none";
+defparam \sw[1]~I .oe_sync_reset = "none";
+defparam \sw[1]~I .operation_mode = "input";
+defparam \sw[1]~I .output_async_reset = "none";
+defparam \sw[1]~I .output_power_up = "low";
+defparam \sw[1]~I .output_register_mode = "none";
+defparam \sw[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_M22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[2]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[2]));
+// synopsys translate_off
+defparam \sw[2]~I .input_async_reset = "none";
+defparam \sw[2]~I .input_power_up = "low";
+defparam \sw[2]~I .input_register_mode = "none";
+defparam \sw[2]~I .input_sync_reset = "none";
+defparam \sw[2]~I .oe_async_reset = "none";
+defparam \sw[2]~I .oe_power_up = "low";
+defparam \sw[2]~I .oe_register_mode = "none";
+defparam \sw[2]~I .oe_sync_reset = "none";
+defparam \sw[2]~I .operation_mode = "input";
+defparam \sw[2]~I .output_async_reset = "none";
+defparam \sw[2]~I .output_power_up = "low";
+defparam \sw[2]~I .output_register_mode = "none";
+defparam \sw[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_V12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[3]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[3]));
+// synopsys translate_off
+defparam \sw[3]~I .input_async_reset = "none";
+defparam \sw[3]~I .input_power_up = "low";
+defparam \sw[3]~I .input_register_mode = "none";
+defparam \sw[3]~I .input_sync_reset = "none";
+defparam \sw[3]~I .oe_async_reset = "none";
+defparam \sw[3]~I .oe_power_up = "low";
+defparam \sw[3]~I .oe_register_mode = "none";
+defparam \sw[3]~I .oe_sync_reset = "none";
+defparam \sw[3]~I .operation_mode = "input";
+defparam \sw[3]~I .output_async_reset = "none";
+defparam \sw[3]~I .output_power_up = "low";
+defparam \sw[3]~I .output_register_mode = "none";
+defparam \sw[3]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_W12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[4]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[4]));
+// synopsys translate_off
+defparam \sw[4]~I .input_async_reset = "none";
+defparam \sw[4]~I .input_power_up = "low";
+defparam \sw[4]~I .input_register_mode = "none";
+defparam \sw[4]~I .input_sync_reset = "none";
+defparam \sw[4]~I .oe_async_reset = "none";
+defparam \sw[4]~I .oe_power_up = "low";
+defparam \sw[4]~I .oe_register_mode = "none";
+defparam \sw[4]~I .oe_sync_reset = "none";
+defparam \sw[4]~I .operation_mode = "input";
+defparam \sw[4]~I .output_async_reset = "none";
+defparam \sw[4]~I .output_power_up = "low";
+defparam \sw[4]~I .output_register_mode = "none";
+defparam \sw[4]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_U12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[5]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[5]));
+// synopsys translate_off
+defparam \sw[5]~I .input_async_reset = "none";
+defparam \sw[5]~I .input_power_up = "low";
+defparam \sw[5]~I .input_register_mode = "none";
+defparam \sw[5]~I .input_sync_reset = "none";
+defparam \sw[5]~I .oe_async_reset = "none";
+defparam \sw[5]~I .oe_power_up = "low";
+defparam \sw[5]~I .oe_register_mode = "none";
+defparam \sw[5]~I .oe_sync_reset = "none";
+defparam \sw[5]~I .operation_mode = "input";
+defparam \sw[5]~I .output_async_reset = "none";
+defparam \sw[5]~I .output_power_up = "low";
+defparam \sw[5]~I .output_register_mode = "none";
+defparam \sw[5]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_U11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[6]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[6]));
+// synopsys translate_off
+defparam \sw[6]~I .input_async_reset = "none";
+defparam \sw[6]~I .input_power_up = "low";
+defparam \sw[6]~I .input_register_mode = "none";
+defparam \sw[6]~I .input_sync_reset = "none";
+defparam \sw[6]~I .oe_async_reset = "none";
+defparam \sw[6]~I .oe_power_up = "low";
+defparam \sw[6]~I .oe_register_mode = "none";
+defparam \sw[6]~I .oe_sync_reset = "none";
+defparam \sw[6]~I .operation_mode = "input";
+defparam \sw[6]~I .output_async_reset = "none";
+defparam \sw[6]~I .output_power_up = "low";
+defparam \sw[6]~I .output_register_mode = "none";
+defparam \sw[6]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_M2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \sw[7]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(sw[7]));
+// synopsys translate_off
+defparam \sw[7]~I .input_async_reset = "none";
+defparam \sw[7]~I .input_power_up = "low";
+defparam \sw[7]~I .input_register_mode = "none";
+defparam \sw[7]~I .input_sync_reset = "none";
+defparam \sw[7]~I .oe_async_reset = "none";
+defparam \sw[7]~I .oe_power_up = "low";
+defparam \sw[7]~I .oe_register_mode = "none";
+defparam \sw[7]~I .oe_sync_reset = "none";
+defparam \sw[7]~I .operation_mode = "input";
+defparam \sw[7]~I .output_async_reset = "none";
+defparam \sw[7]~I .output_power_up = "low";
+defparam \sw[7]~I .output_register_mode = "none";
+defparam \sw[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
 // Location: PIN_M1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -5512,7 +6988,7 @@ defparam \sw[9]~I .output_register_mode = "none";
 defparam \sw[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5548,7 +7024,7 @@ defparam \HEX0[0]~I .output_register_mode = "none";
 defparam \HEX0[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5584,7 +7060,7 @@ defparam \HEX0[1]~I .output_register_mode = "none";
 defparam \HEX0[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5620,7 +7096,7 @@ defparam \HEX0[2]~I .output_register_mode = "none";
 defparam \HEX0[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_K21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5656,7 +7132,7 @@ defparam \HEX0[3]~I .output_register_mode = "none";
 defparam \HEX0[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_M19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[4]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5692,7 +7168,7 @@ defparam \HEX0[4]~I .output_register_mode = "none";
 defparam \HEX0[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[5]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5728,7 +7204,7 @@ defparam \HEX0[5]~I .output_register_mode = "none";
 defparam \HEX0[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX0[6]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5764,7 +7240,7 @@ defparam \HEX0[6]~I .output_register_mode = "none";
 defparam \HEX0[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5800,7 +7276,7 @@ defparam \HEX1[0]~I .output_register_mode = "none";
 defparam \HEX1[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5836,7 +7312,7 @@ defparam \HEX1[1]~I .output_register_mode = "none";
 defparam \HEX1[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_U10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5872,7 +7348,7 @@ defparam \HEX1[2]~I .output_register_mode = "none";
 defparam \HEX1[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5908,7 +7384,7 @@ defparam \HEX1[3]~I .output_register_mode = "none";
 defparam \HEX1[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[4]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5944,7 +7420,7 @@ defparam \HEX1[4]~I .output_register_mode = "none";
 defparam \HEX1[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_C9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[5]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -5980,7 +7456,7 @@ defparam \HEX1[5]~I .output_register_mode = "none";
 defparam \HEX1[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX1[6]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6052,7 +7528,7 @@ defparam \HEX2[0]~I .output_register_mode = "none";
 defparam \HEX2[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX2[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6088,7 +7564,7 @@ defparam \HEX2[1]~I .output_register_mode = "none";
 defparam \HEX2[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX2[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6124,7 +7600,7 @@ defparam \HEX2[2]~I .output_register_mode = "none";
 defparam \HEX2[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX2[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6160,7 +7636,7 @@ defparam \HEX2[3]~I .output_register_mode = "none";
 defparam \HEX2[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_W7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX2[4]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6196,7 +7672,7 @@ defparam \HEX2[4]~I .output_register_mode = "none";
 defparam \HEX2[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX2[5]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6232,7 +7708,7 @@ defparam \HEX2[5]~I .output_register_mode = "none";
 defparam \HEX2[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX2[6]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6268,7 +7744,7 @@ defparam \HEX2[6]~I .output_register_mode = "none";
 defparam \HEX2[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6304,7 +7780,7 @@ defparam \HEX3[0]~I .output_register_mode = "none";
 defparam \HEX3[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6340,7 +7816,7 @@ defparam \HEX3[1]~I .output_register_mode = "none";
 defparam \HEX3[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_W16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6376,7 +7852,7 @@ defparam \HEX3[2]~I .output_register_mode = "none";
 defparam \HEX3[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6412,7 +7888,7 @@ defparam \HEX3[3]~I .output_register_mode = "none";
 defparam \HEX3[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[4]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6448,7 +7924,7 @@ defparam \HEX3[4]~I .output_register_mode = "none";
 defparam \HEX3[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[5]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6484,7 +7960,7 @@ defparam \HEX3[5]~I .output_register_mode = "none";
 defparam \HEX3[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \HEX3[6]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -6522,7 +7998,7 @@ defparam \HEX3[6]~I .output_sync_reset = "none";
 
 // Location: PIN_U22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[0]~I (
-	.datain(\sw~combout [0]),
+	.datain(\serial|ready~regout ),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6558,7 +8034,7 @@ defparam \ledg[0]~I .output_sync_reset = "none";
 
 // Location: PIN_U21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[1]~I (
-	.datain(\sw~combout [1]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6594,7 +8070,7 @@ defparam \ledg[1]~I .output_sync_reset = "none";
 
 // Location: PIN_V22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[2]~I (
-	.datain(\sw~combout [2]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6630,7 +8106,7 @@ defparam \ledg[2]~I .output_sync_reset = "none";
 
 // Location: PIN_V21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[3]~I (
-	.datain(\sw~combout [3]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6666,7 +8142,7 @@ defparam \ledg[3]~I .output_sync_reset = "none";
 
 // Location: PIN_W22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[4]~I (
-	.datain(\sw~combout [4]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6702,7 +8178,7 @@ defparam \ledg[4]~I .output_sync_reset = "none";
 
 // Location: PIN_W21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[5]~I (
-	.datain(\sw~combout [5]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6738,7 +8214,7 @@ defparam \ledg[5]~I .output_sync_reset = "none";
 
 // Location: PIN_Y22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[6]~I (
-	.datain(\sw~combout [6]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6774,7 +8250,7 @@ defparam \ledg[6]~I .output_sync_reset = "none";
 
 // Location: PIN_Y21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledg[7]~I (
-	.datain(\sw~combout [7]),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6810,7 +8286,7 @@ defparam \ledg[7]~I .output_sync_reset = "none";
 
 // Location: PIN_R20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[0]~I (
-	.datain(\key~combout [0]),
+	.datain(\serial|out [0]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6846,7 +8322,7 @@ defparam \ledr[0]~I .output_sync_reset = "none";
 
 // Location: PIN_R19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[1]~I (
-	.datain(\key~combout [1]),
+	.datain(\serial|out [1]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6882,7 +8358,7 @@ defparam \ledr[1]~I .output_sync_reset = "none";
 
 // Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[2]~I (
-	.datain(\key~combout [2]),
+	.datain(\serial|out [2]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6918,7 +8394,7 @@ defparam \ledr[2]~I .output_sync_reset = "none";
 
 // Location: PIN_Y19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[3]~I (
-	.datain(\key~combout [3]),
+	.datain(\serial|out [3]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6954,7 +8430,7 @@ defparam \ledr[3]~I .output_sync_reset = "none";
 
 // Location: PIN_T18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[4]~I (
-	.datain(vcc),
+	.datain(\serial|out [4]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -6990,7 +8466,7 @@ defparam \ledr[4]~I .output_sync_reset = "none";
 
 // Location: PIN_V19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[5]~I (
-	.datain(vcc),
+	.datain(\serial|out [5]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -7026,7 +8502,7 @@ defparam \ledr[5]~I .output_sync_reset = "none";
 
 // Location: PIN_Y18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[6]~I (
-	.datain(vcc),
+	.datain(\serial|out [6]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -7062,7 +8538,7 @@ defparam \ledr[6]~I .output_sync_reset = "none";
 
 // Location: PIN_U18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \ledr[7]~I (
-	.datain(gnd),
+	.datain(\serial|out [7]),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -7168,8 +8644,8 @@ defparam \ledr[9]~I .output_register_mode = "none";
 defparam \ledr[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_L8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-cycloneii_io \UART_TXD~I (
+// Location: PIN_G12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \tx~I (
 	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
@@ -7187,57 +8663,21 @@ cycloneii_io \UART_TXD~I (
 	.regout(),
 	.differentialout(),
 	.linkout(),
-	.padio(UART_TXD));
+	.padio(tx));
 // synopsys translate_off
-defparam \UART_TXD~I .input_async_reset = "none";
-defparam \UART_TXD~I .input_power_up = "low";
-defparam \UART_TXD~I .input_register_mode = "none";
-defparam \UART_TXD~I .input_sync_reset = "none";
-defparam \UART_TXD~I .oe_async_reset = "none";
-defparam \UART_TXD~I .oe_power_up = "low";
-defparam \UART_TXD~I .oe_register_mode = "none";
-defparam \UART_TXD~I .oe_sync_reset = "none";
-defparam \UART_TXD~I .operation_mode = "output";
-defparam \UART_TXD~I .output_async_reset = "none";
-defparam \UART_TXD~I .output_power_up = "low";
-defparam \UART_TXD~I .output_register_mode = "none";
-defparam \UART_TXD~I .output_sync_reset = "none";
-// synopsys translate_on
-
-// Location: PIN_T16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-cycloneii_io \UART_RXD~I (
-	.datain(gnd),
-	.oe(gnd),
-	.outclk(gnd),
-	.outclkena(vcc),
-	.inclk(gnd),
-	.inclkena(vcc),
-	.areset(gnd),
-	.sreset(gnd),
-	.differentialin(gnd),
-	.linkin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.devoe(devoe),
-	.combout(),
-	.regout(),
-	.differentialout(),
-	.linkout(),
-	.padio(UART_RXD));
-// synopsys translate_off
-defparam \UART_RXD~I .input_async_reset = "none";
-defparam \UART_RXD~I .input_power_up = "low";
-defparam \UART_RXD~I .input_register_mode = "none";
-defparam \UART_RXD~I .input_sync_reset = "none";
-defparam \UART_RXD~I .oe_async_reset = "none";
-defparam \UART_RXD~I .oe_power_up = "low";
-defparam \UART_RXD~I .oe_register_mode = "none";
-defparam \UART_RXD~I .oe_sync_reset = "none";
-defparam \UART_RXD~I .operation_mode = "input";
-defparam \UART_RXD~I .output_async_reset = "none";
-defparam \UART_RXD~I .output_power_up = "low";
-defparam \UART_RXD~I .output_register_mode = "none";
-defparam \UART_RXD~I .output_sync_reset = "none";
+defparam \tx~I .input_async_reset = "none";
+defparam \tx~I .input_power_up = "low";
+defparam \tx~I .input_register_mode = "none";
+defparam \tx~I .input_sync_reset = "none";
+defparam \tx~I .oe_async_reset = "none";
+defparam \tx~I .oe_power_up = "low";
+defparam \tx~I .oe_register_mode = "none";
+defparam \tx~I .oe_sync_reset = "none";
+defparam \tx~I .operation_mode = "output";
+defparam \tx~I .output_async_reset = "none";
+defparam \tx~I .output_power_up = "low";
+defparam \tx~I .output_register_mode = "none";
+defparam \tx~I .output_sync_reset = "none";
 // synopsys translate_on
 
 // Location: PIN_W4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
@@ -8932,7 +10372,7 @@ defparam \FL_OE_N~I .output_register_mode = "none";
 defparam \FL_OE_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_M6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \FL_CE_N~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -8968,7 +10408,7 @@ defparam \FL_CE_N~I .output_register_mode = "none";
 defparam \FL_CE_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9004,7 +10444,7 @@ defparam \SRAM_ADDR[0]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_P9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9040,7 +10480,7 @@ defparam \SRAM_ADDR[1]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9076,7 +10516,7 @@ defparam \SRAM_ADDR[2]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9112,7 +10552,7 @@ defparam \SRAM_ADDR[3]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[4]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9148,7 +10588,7 @@ defparam \SRAM_ADDR[4]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[4]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[5]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9184,7 +10624,7 @@ defparam \SRAM_ADDR[5]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[5]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_F2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[6]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9220,7 +10660,7 @@ defparam \SRAM_ADDR[6]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[6]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[7]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9256,7 +10696,7 @@ defparam \SRAM_ADDR[7]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[7]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[8]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9292,7 +10732,7 @@ defparam \SRAM_ADDR[8]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[8]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_V9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[9]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9328,7 +10768,7 @@ defparam \SRAM_ADDR[9]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[9]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[10]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9364,7 +10804,7 @@ defparam \SRAM_ADDR[10]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[10]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_W11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[11]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9400,7 +10840,7 @@ defparam \SRAM_ADDR[11]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[11]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_W8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[12]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9436,7 +10876,7 @@ defparam \SRAM_ADDR[12]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[12]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_E22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[13]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9472,7 +10912,7 @@ defparam \SRAM_ADDR[13]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[13]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_R11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[14]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9508,7 +10948,7 @@ defparam \SRAM_ADDR[14]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[14]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[15]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9544,7 +10984,7 @@ defparam \SRAM_ADDR[15]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[15]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[16]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9580,7 +11020,7 @@ defparam \SRAM_ADDR[16]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[16]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_ADDR[17]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9616,7 +11056,7 @@ defparam \SRAM_ADDR[17]~I .output_register_mode = "none";
 defparam \SRAM_ADDR[17]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_UB_N~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9652,7 +11092,7 @@ defparam \SRAM_UB_N~I .output_register_mode = "none";
 defparam \SRAM_UB_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_M19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_LB_N~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9688,7 +11128,7 @@ defparam \SRAM_LB_N~I .output_register_mode = "none";
 defparam \SRAM_LB_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_W9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_WE_N~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9724,7 +11164,7 @@ defparam \SRAM_WE_N~I .output_register_mode = "none";
 defparam \SRAM_WE_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_CE_N~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9760,7 +11200,7 @@ defparam \SRAM_CE_N~I .output_register_mode = "none";
 defparam \SRAM_CE_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SRAM_OE_N~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9796,7 +11236,7 @@ defparam \SRAM_OE_N~I .output_register_mode = "none";
 defparam \SRAM_OE_N~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_J21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \SD_CLK~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -9976,7 +11416,7 @@ defparam \TDO~I .output_register_mode = "none";
 defparam \TDO~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \I2C_SCLK~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10012,7 +11452,7 @@ defparam \I2C_SCLK~I .output_register_mode = "none";
 defparam \I2C_SCLK~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \PS2_DAT~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -10048,7 +11488,7 @@ defparam \PS2_DAT~I .output_register_mode = "none";
 defparam \PS2_DAT~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \PS2_CLK~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -10084,7 +11524,7 @@ defparam \PS2_CLK~I .output_register_mode = "none";
 defparam \PS2_CLK~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_HS~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10120,7 +11560,7 @@ defparam \VGA_HS~I .output_register_mode = "none";
 defparam \VGA_HS~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_W11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_VS~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10156,7 +11596,7 @@ defparam \VGA_VS~I .output_register_mode = "none";
 defparam \VGA_VS~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_U8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_R[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10192,7 +11632,7 @@ defparam \VGA_R[0]~I .output_register_mode = "none";
 defparam \VGA_R[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_R[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10228,7 +11668,7 @@ defparam \VGA_R[1]~I .output_register_mode = "none";
 defparam \VGA_R[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_R[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10264,7 +11704,7 @@ defparam \VGA_R[2]~I .output_register_mode = "none";
 defparam \VGA_R[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_W9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_R[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10300,7 +11740,7 @@ defparam \VGA_R[3]~I .output_register_mode = "none";
 defparam \VGA_R[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_W8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_G[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10336,7 +11776,7 @@ defparam \VGA_G[0]~I .output_register_mode = "none";
 defparam \VGA_G[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_G[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10372,7 +11812,7 @@ defparam \VGA_G[1]~I .output_register_mode = "none";
 defparam \VGA_G[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_G[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10408,7 +11848,7 @@ defparam \VGA_G[2]~I .output_register_mode = "none";
 defparam \VGA_G[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_G[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10444,7 +11884,7 @@ defparam \VGA_G[3]~I .output_register_mode = "none";
 defparam \VGA_G[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_V20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_B[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10480,7 +11920,7 @@ defparam \VGA_B[0]~I .output_register_mode = "none";
 defparam \VGA_B[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_B[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10516,7 +11956,7 @@ defparam \VGA_B[1]~I .output_register_mode = "none";
 defparam \VGA_B[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AA8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_L8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_B[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10552,7 +11992,7 @@ defparam \VGA_B[2]~I .output_register_mode = "none";
 defparam \VGA_B[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \VGA_B[3]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10588,7 +12028,7 @@ defparam \VGA_B[3]~I .output_register_mode = "none";
 defparam \VGA_B[3]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_J1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \AUD_ADCDAT~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -10624,7 +12064,7 @@ defparam \AUD_ADCDAT~I .output_register_mode = "none";
 defparam \AUD_ADCDAT~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_D5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \AUD_DACDAT~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -10660,7 +12100,7 @@ defparam \AUD_DACDAT~I .output_register_mode = "none";
 defparam \AUD_DACDAT~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_K21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_G22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \AUD_XCK~I (
 	.datain(gnd),
 	.oe(vcc),

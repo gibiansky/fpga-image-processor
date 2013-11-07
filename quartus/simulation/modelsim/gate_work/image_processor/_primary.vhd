@@ -14,8 +14,8 @@ entity image_processor is
         HEX3            : out    vl_logic_vector(6 downto 0);
         ledg            : out    vl_logic_vector(7 downto 0);
         ledr            : out    vl_logic_vector(9 downto 0);
-        UART_TXD        : out    vl_logic;
-        UART_RXD        : in     vl_logic;
+        tx              : out    vl_logic;
+        rx              : in     vl_logic;
         DRAM_DQ         : inout  vl_logic_vector(15 downto 0);
         DRAM_ADDR       : out    vl_logic_vector(11 downto 0);
         DRAM_LDQM       : out    vl_logic;

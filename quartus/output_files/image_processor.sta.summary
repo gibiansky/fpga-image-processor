@@ -2,4 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'CLOCK_24'
+Slack : -2.343
+TNS   : -37.488
+
+Type  : Slow Model Setup 'serial_read:serial|clk_counter[0]'
+Slack : -1.914
+TNS   : -5.249
+
+Type  : Slow Model Setup 'serial_read:serial|baud_count[0]'
+Slack : -0.706
+TNS   : -3.931
+
+Type  : Slow Model Hold 'CLOCK_24'
+Slack : -3.141
+TNS   : -34.624
+
+Type  : Slow Model Hold 'serial_read:serial|clk_counter[0]'
+Slack : -2.947
+TNS   : -7.745
+
+Type  : Slow Model Hold 'serial_read:serial|baud_count[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_24'
+Slack : -1.631
+TNS   : -21.183
+
+Type  : Slow Model Minimum Pulse Width 'serial_read:serial|baud_count[0]'
+Slack : -0.611
+TNS   : -26.884
+
+Type  : Slow Model Minimum Pulse Width 'serial_read:serial|clk_counter[0]'
+Slack : -0.611
+TNS   : -3.666
+
+Type  : Fast Model Setup 'serial_read:serial|clk_counter[0]'
+Slack : -0.972
+TNS   : -2.739
+
+Type  : Fast Model Setup 'CLOCK_24'
+Slack : -0.358
+TNS   : -5.728
+
+Type  : Fast Model Setup 'serial_read:serial|baud_count[0]'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_24'
+Slack : -1.655
+TNS   : -20.263
+
+Type  : Fast Model Hold 'serial_read:serial|clk_counter[0]'
+Slack : -1.218
+TNS   : -3.329
+
+Type  : Fast Model Hold 'serial_read:serial|baud_count[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_24'
+Slack : -1.380
+TNS   : -17.380
+
+Type  : Fast Model Minimum Pulse Width 'serial_read:serial|baud_count[0]'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Fast Model Minimum Pulse Width 'serial_read:serial|clk_counter[0]'
+Slack : -0.500
+TNS   : -3.000
+
 ------------------------------------------------------------
